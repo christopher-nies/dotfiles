@@ -1,0 +1,94 @@
+// Place your key bindings in this file to override the defaults
+[
+		// FEATURE ALREADY IMPLEMENTED WITH `Ctrl+j` WHEN VIM IS ENABLED!
+    	// {
+        // "key": "alt+j",
+        // "command": "selectNextSuggestion",
+        // "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+        // },
+        // {
+        // "key": "alt+k",
+        // "command": "selectPrevSuggestion",
+        // "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+        // }, 
+        {
+        "key": "shift+alt+v",
+        "command": "toggleVim"
+        },
+        {
+        "key": "ctrl+shift+b",
+        "command": "workbench.action.toggleSidebarVisibility"
+        },
+        {
+        "key": "ctrl+alt+l",
+        "command": "ltex.checkCurrentDocument"
+        },
+        {
+        "key": "ctrl+alt+k",
+        "command": "ltex.clearAllDiagnostics"
+        },
+        {
+        "key": "ctrl+alt+m",
+        "command": "markdown.showPreviewToSide"
+        },
+        {
+        "key": "ctrl+shift+a",
+        "command": "editor.action.sortLinesAscending"
+        },
+        {
+        "key": "ctrl+tab",
+        "command": "workbench.action.nextEditorInGroup"
+        },
+        {
+        "key": "ctrl+shift+tab",
+        "command": "workbench.action.previousEditorInGroup"
+        },
+        {
+        "key": "alt+tab",
+        "command": "workbench.action.focusNextGroup"
+		},
+		{
+			"key": "o",
+			"command": "jupyter.insertCellBelow",
+			"when": "editorTextFocus && jupyter.hascodecells && !jupyter.webExtension && !notebookEditorFocused"
+		},
+		{
+			"key": "ctrl+; b",
+			"command": "-jupyter.insertCellBelow",
+			"when": "editorTextFocus && jupyter.hascodecells && !jupyter.webExtension && !notebookEditorFocused"
+		},
+		{
+			"key": "shift+o",
+			"command": "jupyter.insertCellAbove",
+			"when": "editorTextFocus && jupyter.hascodecells && !jupyter.webExtension && !notebookEditorFocused"
+		},
+		{
+			"key": "ctrl+; a",
+			"command": "-jupyter.insertCellAbove",
+			"when": "editorTextFocus && jupyter.hascodecells && !jupyter.webExtension && !notebookEditorFocused"
+		},
+		{
+			"key": "o",
+			"command": "notebook.cell.insertCodeCellBelowAndFocusContainer",
+			"when": "notebookEditorFocused && !inputFocus && !notebookOutputInputFocused"
+		},
+		{
+			"key": "b",
+			"command": "-notebook.cell.insertCodeCellBelowAndFocusContainer",
+			"when": "notebookEditorFocused && !inputFocus && !notebookOutputInputFocused"
+		},
+		{
+			"key": "shift+o",
+			"command": "notebook.cell.insertCodeCellAboveAndFocusContainer",
+			"when": "notebookEditorFocused && !inputFocus && !notebookOutputInputFocused"
+		},
+		{
+			"key": "a",
+			"command": "-notebook.cell.insertCodeCellAboveAndFocusContainer",
+			"when": "notebookEditorFocused && !inputFocus && !notebookOutputInputFocused"
+		},
+		{
+			"key": "ctrl+alt+b",
+			"command": "-workbench.action.toggleAuxiliaryBar"
+		}
+]

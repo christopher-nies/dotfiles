@@ -1,0 +1,14 @@
+configuration {
+  display-drun: "Applications:";
+  display-window: "Windows:";
+  drun-display-format: "{icon} {name} [<span weight='light' size='small'><i>({generic})</i></span>]"; 
+  font: "Cascadia Code 15";
+  modi: "window,run,drun";
+  show-icons: true;
+  icon-theme: "Papirus";
+}
+element-icon {
+  size: 2.0em;
+}
+
+@theme "gruvbox_center"

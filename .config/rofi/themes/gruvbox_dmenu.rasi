@@ -1,0 +1,55 @@
+configuration{
+	show-icons: 				false;
+}
+* {
+    background-color:           #12100f;
+    border-color:               #282c34;
+    text-color:                 #9a8a6f;
+    height:                     20px;
+    font:                       "CaskaydiaCove Nerd Font Medium 9";
+    prompt-font:                "CaskaydiaCove Nerd Font Medium 9";
+	show-icons: 				false;
+    prompt-background:          #458588;
+    prompt-foreground:          #2e2c2c;
+    prompt-padding:             2px;
+    selected-normal-background: #cc241d;
+    selected-normal-foreground: #ffffffec;
+}
+#window {
+    anchor: north;
+    location: north;
+    width: 100%;
+    padding: 0px;
+    children: [ horibox ];
+}
+#horibox {
+    orientation: horizontal;
+    children: [ prompt, entry, listview ];
+}
+#prompt {
+    padding:          @prompt-padding;
+    background-color: @prompt-background;
+    text-color:       @prompt-foreground;
+    font:             @prompt-font;
+}
+#listview {
+    layout: horizontal;
+    lines: 100;
+}
+#entry {
+    padding: 2px;
+    expand: false;
+    width: 15em;
+}
+#element {
+    padding: 2px 8px;
+}
+#element selected {
+    background-color: @selected-normal-background;
+    text-color:       @selected-normal-foreground;
+}
+
+element-text {
+    background-color: inherit;
+    text-color:       inherit;
+}

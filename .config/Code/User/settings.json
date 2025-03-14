@@ -1,0 +1,504 @@
+{
+  "editor.fontSize": 16,
+  "editor.wordWrap": "bounded",
+  "editor.wordWrapColumn": 110,
+  "editor.fontFamily": "CaskaydiaCove Nerd Font",
+  "editor.fontLigatures": true,
+  "editor.lineNumbers": "relative",
+  "editor.cursorSurroundingLines": 8,
+  "editor.cursorBlinking": "solid",
+  "editor.cursorStyle": "block",
+  "editor.tabSize": 4,
+  "editor.detectIndentation": false,
+  "editor.insertSpaces": false,
+  "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+  "editor.renderWhitespace": "all",
+
+  "workbench.editor.scrollToSwitchTabs": true,
+  "workbench.editor.focusRecentEditorAfterClose": false,
+  "workbench.settings.editor": "json",
+  "workbench.settings.useSplitJSON": true,
+  "workbench.settings.openDefaultSettings": true,
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.colorTheme": "Gruvbox Dark Hard",
+  "workbench.iconTheme": "gruvbox-material-icon-theme",
+
+  "explorer.sortOrder": "type",
+  "explorer.confirmDragAndDrop": false,
+
+  "window.confirmBeforeClose": "always",
+
+  "terminal.integrated.fontFamily": "CaskaydiaCove Nerd Font",
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.cursorStyle": "block",
+  "terminal.integrated.cursorBlinking": false,
+  "terminal.integrated.gpuAcceleration": "auto",
+
+  "debug.console.fontFamily": "CaskaydiaCove Nerd Font",
+  "debug.console.fontSize": 12,
+
+  "files.autoSave": "onFocusChange",
+  "files.autoSaveDelay": 60000, // 1 min
+  "files.associations": {
+    "*.pdf_tex": "tex",
+	"*.tikz": "tex",
+  },
+
+  "security.workspace.trust.enabled": false,
+  "update.mode": "none",
+
+
+  "extensions.ignoreRecommendations": true,
+// ================================================================
+// EXTENSIONS
+// ================================================================
+
+// Python
+  "code-runner.executorMap": {
+  	"python": "$pythonPath -u $fullFileName",
+  },
+  "code-runner.clearPreviousOutput": false,
+  "code-runner.showExecutionMessage": false,
+  "code-runner.runInTerminal": true,
+  "python.condaPath": "$HOME/miniconda3/bin/conda",
+  "jupyter.widgetScriptSources": [
+  	"jsdelivr.com",
+  	"unpkg.com"
+  ],
+  "python.languageServer": "Pylance",
+
+// -----
+// LaTeX
+// -----
+  "ltex.language": "de-DE",
+  "ltex.dictionary": {
+    "de-DE": [
+        ":~/Documents/ltex-de.txt"
+        ]
+  },
+  "ltex.checkFrequency": "manual",
+  "ltex.latex.commands": {"\\includesvg[]{}": "ignore"},
+
+  "latex-workshop.latex.clean.subfolder.enabled": true,
+  "latex-workshop.latex.clean.fileTypes": [
+    "*.aux",
+    "*.bbl",
+    "*.blg",
+    "*.idx",
+    "*.ind",
+    "*.lof",
+    "*.lot",
+    "*.out",
+    "*.toc",
+    "*.acn",
+    "*.acr",
+    "*.alg",
+    "*.glg",
+    "*.glo",
+    "*.gls",
+    "*.fls",
+    "*.log",
+    "*.fdb_latexmk",
+    "*.snm",
+    "*.synctex(busy)",
+    "*.synctex.gz(busy)",
+	"*.synctex.gz",
+    "*.nav",
+    "*.gz",
+    "*.bcf",
+    "*.xml",
+    "*.log"
+  ],
+  "latex-workshop.latex.autoBuild.run": "never",
+  "latex-workshop.latex.recipe.default": "lastUsed",
+  "latex-workshop.hover.preview.scale": 2,
+  "latex-workshop.linting.run": "onSvae",
+  "latex-workshop.view.pdf.viewer": "external",
+  "latex-workshop.view.pdf.external.viewer.command": "zathura",
+  "latex-workshop.view.pdf.external.viewer.args": [
+	"--synctex-editor-command",
+	"code --no-sandbox -r -g %{input}:%{line}",
+	"%PDF%"
+   		],
+  "latex-workshop.view.pdf.external.synctex.command": "zathura",
+  "latex-workshop.view.pdf.external.synctex.args": [
+	"--synctex-forward=%LINE%:0:%TEX%",
+	"%PDF%"
+	],
+  "latex-workshop.latex.tools": [
+    {
+      "name": "latexmk",
+      "command": "latexmk",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-pdf",
+        "-outdir=%OUTDIR%",
+		"-shell-escape",
+        "%DOC%"
+      ],
+      "env": {}
+    },
+    {
+      "name": "lualatexmk",
+      "command": "latexmk",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-lualatex",
+        "-outdir=%OUTDIR%",
+        "%DOC%"
+      ],
+      "env": {}
+    },
+    {
+      "name": "xelatexmk",
+      "command": "latexmk",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-xelatex",
+        "-outdir=%OUTDIR%",
+        "%DOC%"
+      ],
+      "env": {}
+    },
+    {
+      "name": "latexmk_rconly",
+      "command": "latexmk",
+      "args": [
+        "%DOC%"
+      ],
+      "env": {}
+    },
+    {
+      "name": "pdflatex",
+      "command": "pdflatex",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "%DOC%"
+      ],
+      "env": {}
+    },
+    {
+      "name": "pdflatex_standalone",
+      "command": "pdflatex",
+      "args": [
+        "-shell-escape",
+        "%DOC%"
+      ],
+      "env": {}
+    },
+    {
+      "name": "bibtex",
+      "command": "bibtex",
+      "args": [
+        "%DOCFILE%"
+      ],
+      "env": {}
+    },
+    {
+      "name": "rnw2tex",
+      "command": "Rscript",
+      "args": [
+        "-e",
+        "knitr::opts_knit$set(concordance = TRUE); knitr::knit('%DOCFILE_EXT%')"
+      ],
+      "env": {}
+    },
+    {
+      "name": "jnw2tex",
+      "command": "julia",
+      "args": [
+        "-e",
+        "using Weave; weave(\"%DOC_EXT%\", doctype=\"tex\")"
+      ],
+      "env": {}
+    },
+    {
+      "name": "jnw2texmintex",
+      "command": "julia",
+      "args": [
+        "-e",
+        "using Weave; weave(\"%DOC_EXT%\", doctype=\"texminted\")"
+      ],
+      "env": {}
+    },
+    {
+      "name": "tectonic",
+      "command": "tectonic",
+      "args": [
+        "--synctex",
+        "--keep-logs",
+        "%DOC%.tex"
+      ],
+      "env": {}
+    }
+  ],
+
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "latexmk 🔃",
+      "tools": [
+        "latexmk"
+      ]
+    },
+    {
+      "name": "standalone 🖼",
+      "tools": [
+        "pdflatex_standalone"
+      ]
+    },
+    {
+      "name": "latexmk (latexmkrc)",
+      "tools": [
+        "latexmk_rconly"
+      ]
+    },
+    {
+      "name": "latexmk (lualatex)",
+      "tools": [
+        "lualatexmk"
+      ]
+    },
+    {
+      "name": "latexmk (xelatex)",
+      "tools": [
+        "xelatexmk"
+      ]
+    },
+    {
+      "name": "pdflatex ➞ bibtex ➞ pdflatex × 2",
+      "tools": [
+        "pdflatex",
+        "bibtex",
+        "pdflatex",
+        "pdflatex"
+      ]
+    },
+    {
+      "name": "Compile Rnw files",
+      "tools": [
+        "rnw2tex",
+        "latexmk"
+      ]
+    },
+    {
+      "name": "Compile Jnw files",
+      "tools": [
+        "jnw2tex",
+        "latexmk"
+      ]
+    },
+    {
+      "name": "tectonic",
+      "tools": [
+        "tectonic"
+      ]
+    }
+  ],
+// ---------
+// todo-tree
+// ---------
+  "todo-tree.highlights.defaultHighlight": {
+    "icon": "hourglass",
+    "type": "line",
+    "foreground": "#000000",
+    "background": "#808080",
+  },
+  "todo-tree.highlights.customHighlight": {
+    "TODO": {
+      "iconColour": "#72fff87e",
+      "background": "#72fff87e",
+    },
+    "FIXME": {
+      "icon": "alert",
+      "iconColour": "#e8f80080",
+      "background": "#e8f80080",
+    },
+    "COMPL": {
+      "icon": "verified",
+      "iconColour": "#00f80046",
+      "background": "#00f80044",
+    },
+    "BUG": {
+      "icon": "megaphone",
+      "iconColour": "#f8000080",
+      "background": "#f8000080",
+      "foreground": "#ffffff",
+    }
+  },
+  "todo-tree.general.tags": [
+      "XXX",
+      "TODO",
+      "HACK",
+      "FIXME",
+      "BUG",
+      "COMPL"
+  ],
+  "todo-tree.regex.regex": "((%|//|#|<!--|;|/\\*|^)\\s*($TAGS)|^\\s*- \\[ \\])",
+  
+  // ---
+  // vim
+  // ---
+  "vim.disableExtension": true,
+  "vim.enableNeovim": true,
+  "vim.neovimPath": "/usr/bin/nvim",
+  "vim.leader": "<Space>",
+  "vim.easymotion": true,
+  "vim.sneak": true,
+  "vim.insertModeKeyBindingsNonRecursive": [
+    {
+      "before": ["j", "k"],
+      "after": ["<ESC>"]
+    }
+  ],
+  "vim.operatorPendingModeKeyBindings": [
+    // does not work, as expected!
+    {
+        "before": ["L"],
+        "after": ["$"]
+    },
+    {
+        "before": ["H"],
+        "after": ["^"]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    //to ommit linewraps
+    {
+      "before": ["j"],
+      "after": ["g", "j"]
+    },
+    {
+      "before": ["k"],
+      "after": ["g", "k"]
+    },
+    {
+      "before": ["J"],
+      "after": ["5", "g", "j"]
+    },
+    {
+      "before": ["K"],
+      "after": ["5", "g", "k"]
+    },
+    {
+      "before": ["<Leader>", "j"],
+      "after": ["J"]
+    },
+    // jump to begin/end of line
+    {
+      "before": ["L"],
+      "after": ["$"]
+    },
+    {
+        "before": ["H"],
+        "after": ["^"]
+    },
+    // splits
+    {
+      "before": ["<C-h>"],
+      "after": ["<C-w>", "h"]
+    },
+    {
+      "before": ["<C-j>"],
+      "after": ["<C-w>", "j"]
+    },
+    {
+      "before": ["<C-k>"],
+      "after": ["<C-w>", "k"]
+    },
+    {
+      "before": ["<C-l>"],
+      "after": ["<C-w>", "l"]
+    },
+    // tabs
+    {
+      "before": ["<Leader>", "t", "t"],
+      "commands": [":tabnew"]
+    },
+    {
+      "before": ["<Leader>", "t", "n"],
+      "commands": [":tabnext"]
+    },
+    {
+      "before": ["<Leader>", "q"],
+      "commands": [":q"]
+    },
+    {
+      "before": ["<Leader>", "t", "p"],
+      "commands": [":tabprev"]
+    },
+    {
+      "before": ["<Leader>", "t", "o"],
+      "commands": [":tabo"]
+    },
+    {
+      "before": ["<Leader>", "/"],
+      "commands": [":noh"]
+    },
+    {
+      "before": ["<C-w>",],
+      "after" : [":", "w", "q", "!", "<enter>"]
+    },
+    // vscode commands
+    {
+      "before": ["leader", "w"],
+      "commands": [
+          "workbench.action.files.save",
+      ]
+    },
+    {
+      "before": ["<Leader>", "p"],
+      "commands": [
+            "workbench.action.showCommands",
+      ]
+    },
+    {
+      "before": ["<Leader>", "o"],
+      "commands": [
+          "workbench.action.gotoSymbol",
+      ]
+    }
+  ],
+  "vim.statusBarColorControl": false,
+  "vim.statusBarColors.normal": ["#989900", "#000"],
+  "vim.statusBarColors.insert": ["#418588", "#000"],
+  "vim.statusBarColors.visual": ["#b26086", "#000"],
+  "vim.statusBarColors.visualline": ["#b26086", "#000"],
+  "vim.statusBarColors.visualblock": ["#b26086", "#000"],
+  "vim.statusBarColors.replace": "#ce220e",
+  "vim.statusBarColors.commandlineinprogress": "#418588",
+  "vim.statusBarColors.searchinprogressmode": "#418588",
+  "vim.statusBarColors.easymotionmode": "#418588",
+  "vim.statusBarColors.easymotioninputmode": "#418588",
+  "vim.statusBarColors.surroundinputmode": "#418588",
+
+// ---
+// git
+// ---
+  "git.suggestSmartCommit": false,
+  "git.confirmSync": false,
+  "git.autofetch": "all",
+  "gitlens.hovers.currentLine.over": "line",
+  "gitlens.codeLens.enabled": false,
+  "gitlens.currentLine.enabled": false,
+  "gitlens.hovers.enabled": false,
+
+// ------
+// others
+// ------
+  "rewrap.wholeComment": true,
+  "rewrap.wrappingColumn": 80, 
+  "comment-divider.mainHeaderAlign": "center",
+  "comment-divider.mainHeaderFiller": "=",
+  "comment-divider.shouldLengthIncludeIndent": true,
+  "comment-divider.length": 80,
+  "comment-divider.subheaderAlign": "center",
+  "chat.commandCenter.enabled": false,
+}

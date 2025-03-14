@@ -1,0 +1,62 @@
+set adjust-open "best-fit"
+
+#set smooth-scroll "true"
+set scroll-page-aware "true"
+set scroll-step 200
+
+set statusbar-h-padding 0
+set statusbar-v-padding 0
+set page-padding 1
+
+set selection-clipboard clipboard
+
+set window-height 1080
+set window-width 1920 
+set guioptions none
+
+# synctex
+set synctex "true"
+set synctex-editor-command "code -g %{input}:%{line}"
+#set synctex-editor-command "code --reuse-window -g \"%{input}:%{line}\"" 
+
+# sepia colors
+include zathura-gruvbox-light
+# include zathura-gruvbox-dark
+set recolor true
+set recolor-keephue
+
+set default-bg "#000000"
+# set default-fg "#fbf1c7"
+# set recolor-lightcolor "#fbf1c7"
+# set recolor-darkcolor "#000000"
+# set recolor-keephue "true"
+
+
+# keymaps
+# ===================
+
+# navigation
+map j navigate next
+map k navigate previous
+map J scroll down
+map K scroll up
+map H scroll left
+map L scroll right
+
+# zoom 
+map = zoom in
+map - zoom out
+
+# keymapd like sumatrapdf
+map <C-8> feedkeys ":set first-page-column 1:2 <Return>"
+map <C-7> feedkeys ":set first-page-column 1:1 <Return>"
+map <C-6> toggle_page_mode
+
+# others
+
+# map <C-h> feedkeys ":set recolor-keephue <Return>"
+unmap <C-i>
+map <C-i> feedkeys ":set recolor-keephue <Return> <Esc>"
+map <C-r> reload
+map i recolor
+map p print

@@ -1,0 +1,100 @@
+// Place your snippets for latex here. Each snippet is defined under a snippet name and has a prefix, body and 
+// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+// same ids are connected.
+// Example:
+// "Print to console": {
+// 	"prefix": "log",
+// 	"body": [
+// 		"console.log('$1');",
+// 		"$2"
+// 	],
+// 	"description": "Log output to console"
+// }
+//
+// using this website to create snippets
+// https://snippet-generator.app/
+//
+// /n -> nextline, /t -> tab
+//
+{
+"new tabular": {
+	"prefix": "BTA",
+	"body": [
+		"\\begin{table}[${1:htbp}]\n\t\\centering\n\t\\caption{${2:<caption>}}\n\t\\label{tab:${3:<label>}}\n\t\t\\begin{tabular}{${4:c|c|c}}\n\t\t$0\n\t\t\\end{tabular}\n\\end{table}"
+	],
+	"description": "Insert new table"
+	},
+
+// "insert pdf_tex": {
+// 	"prefix": "svg",
+// 	"body": [
+// 		"% \\def\\svgwidth{$1\\textwidth}",
+// 		"\\input{$2}"
+// 	],
+// 	"description": "Insert pdf_tex"
+// 	},
+
+"Insert Unit": {
+	"prefix": "unit",
+	"body": [
+		"\\qty{$1}{$2}"
+	],
+	"description": "Insert unit"
+},
+
+"Insert number": {
+	"prefix": "number",
+	"body": [
+		"\\num{$1}"
+	],
+	"description": "Insert number"
+},
+
+"Insert fraction": {
+	"prefix": "fraction",
+	"body": [
+		"\\frac{$1}{$2}"
+	],
+	"description": "Insert fraction"
+},
+
+"Insert Figure Reference": {
+	"prefix": "Abbildung",
+	"body": [
+		"Abbildung~\\ref{fig:$1}"
+	],
+	"description": "Insert Figure Reference"
+},
+
+"Insert Table Reference": {
+	"prefix": "Tabelle",
+	"body": [
+		"Tabelle~\\ref{tab:$1}"
+	],
+	"description": "Insert Table Reference"
+},
+
+"Insert Equation Reference": {
+	"prefix": "Gleichung",
+	"body": [
+		"Gleichung~\\eqref{eq:$1}"
+	],
+	"description": "Insert Equation Reference"
+},
+
+"Insert Color": {
+	"prefix": "color",
+	"body": [
+		"\\textcolor{$1}{$2}"
+	],
+	"description": "Insert Color"
+},
+
+"Begin Equation": {
+	"prefix": "BEQ",
+	"body": [
+		"\\begin{equation}\n\t\\label{eq:${1:<eqlabel>}}\n\t$0\n\\end{equation}"
+	]
+}
+}
