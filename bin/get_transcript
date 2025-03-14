@@ -1,0 +1,17 @@
+#!/bin/bash
+
+source ~/.env
+
+# Activate the conda environment
+source ~/miniconda3/bin/activate yt
+
+# Check if the youtube URL is provided
+if [ $# -eq 0 ]; then
+    echo "Usage: $0 'youtube_url'"
+    exit 1
+fi
+
+# Run the Python script and pipe the output to wl-copy
+python3 $HOME/bin/youtube_transcript.py "$1" | wl-copy
+
+notify-send "Copied corrected transcript to the clipboard!"

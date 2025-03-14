@@ -1,0 +1,5 @@
+#!/bin/bash
+python3 $HOME/.config/nerd-dictation/nerd-dictation end
+
+source "$HOME/miniconda3/bin/deactivate"
+

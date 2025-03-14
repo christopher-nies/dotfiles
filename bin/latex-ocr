@@ -1,0 +1,4 @@
+#!/bin/zsh
+source ~/miniconda3/bin/activate latexocr
+env SCREENSHOT_TOOL='grim' $HOME/miniconda3/envs/latexocr/bin/latexocr
+conda deactivate

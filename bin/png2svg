@@ -1,0 +1,43 @@
+#!/bin/bash
+
+# Check if the required commands are available
+if ! command -v convert &> /dev/null || ! command -v potrace &> /dev/null; then
+    echo "Please install ImageMagick and Potrace before running this script."
+    exit 1
+fi
+
+# Check if input and output arguments are provided
+if [ "$#" -ne 2 ]; then
+    echo "Usage: $0 input.png output.svg"
+    exit 1
+fi
+
+INPUT_PNG=$1
+OUTPUT_SVG=$2
+TEMP_PPM="temp.ppm"
+
+# Convert the PNG to PPM using ImageMagick
+echo "Converting $INPUT_PNG to PPM format..."
+convert "$INPUT_PNG" -colorspace Gray -threshold 50% "$TEMP_PPM"
+
+# Check if the conversion to PPM was successful
+if [ $? -ne 0 ]; then
+    echo "Failed to convert $INPUT_PNG to PPM."
+    exit 1
+fi
+
+# Use Potrace to convert the PPM to SVG
+echo "Converting $TEMP_PPM to SVG format..."
+potrace -s "$TEMP_PPM" -o "$OUTPUT_SVG"
+
+# Check if the conversion to SVG was successful
+if [ $? -ne 0 ]; then
+    echo "Failed to convert $TEMP_PPM to SVG."
+    exit 1
+fi
+
+# Cleanup the temporary PPM file
+rm "$TEMP_PPM"
+echo "Conversion completed: $OUTPUT_SVG created."
+
+exit 0
