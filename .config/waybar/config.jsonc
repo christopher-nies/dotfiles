@@ -269,11 +269,11 @@
     "exec": "$HOME/.config/waybar/waybar_timer hook",
     "exec-on-event": false,
     "return-type": "json",
-    "format": "{icon} {0}",
+    "format": "{0}{icon}",
     "format-icons": {
-        "standby": "",
-        "running": "",
-        "paused": ""
+        "standby": " ",
+        "running": " ",
+        "paused": " "
     },
     "on-click": "$HOME/.config/waybar/waybar_timer new 25 'notify-send \"Session finished\" && paplay $HOME/.config/waybar/bell.mp3'",
     "on-click-middle": "$HOME/.config/waybar/waybar_timer cancel",
