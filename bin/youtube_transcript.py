@@ -40,7 +40,7 @@ def correct_punctuation(text):
         messages=[
             {
 				"role": "user", 
-				"content": f"Correct the punctuation in the following text. Respond only with the corrected transcript and no additional text: '{text}'"
+				"content": f"Correct the punctuation in the following text with respect to the language ued. Respond only with the corrected transcript and no additional text: '{text}'"
 			}
         ],
 		model="gpt-4o-mini",
