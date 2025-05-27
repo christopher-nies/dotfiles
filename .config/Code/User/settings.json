@@ -40,8 +40,8 @@
   "files.autoSave": "onFocusChange",
   "files.autoSaveDelay": 60000, // 1 min
   "files.associations": {
-    "*.pdf_tex": "tex",
-	"*.tikz": "tex",
+    "*.pdf_tex": "latex",
+	"*.tikz": "latex",
   },
 
   "security.workspace.trust.enabled": false,
