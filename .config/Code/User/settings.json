@@ -79,6 +79,7 @@
   "ltex.checkFrequency": "manual",
   "ltex.latex.commands": {"\\includesvg[]{}": "ignore"},
 
+  "latex-workshop.latex.clean.method": "glob",
   "latex-workshop.latex.clean.subfolder.enabled": true,
   "latex-workshop.latex.clean.fileTypes": [
 	"*.acn",
