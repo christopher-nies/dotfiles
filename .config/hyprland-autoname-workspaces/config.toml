@@ -99,6 +99,7 @@ DEFAULT = ":default:"
 "ferdium" = ":ferdium:"
 "qalculate-gtk" = ":calculator:"
 "com.github.xournalpp.xournalpp" = ":xournal:"
+"com.obsproject.Studio" = ":obsstudio:"
 
 # anki 
 # nextcloud 
