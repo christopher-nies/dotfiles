@@ -20,7 +20,7 @@
   "workbench.settings.useSplitJSON": true,
   "workbench.settings.openDefaultSettings": true,
   "workbench.startupEditor": "newUntitledFile",
-  "workbench.colorTheme": "Gruvbox Dark Hard",
+  "workbench.colorTheme": "Gruvbox Dark Medium",
   "workbench.iconTheme": "gruvbox-material-icon-theme",
 
   "explorer.sortOrder": "type",
