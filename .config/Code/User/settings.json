@@ -243,7 +243,6 @@
       "env": {}
     }
   ],
-
   "latex-workshop.latex.recipes": [
     {
       "name": "latexmk 🔃",
