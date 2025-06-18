@@ -9,11 +9,12 @@
   "editor.cursorBlinking": "solid",
   "editor.cursorStyle": "block",
   "editor.tabSize": 4,
-  "editor.detectIndentation": false,
+  "editor.detectIndentation": true,
+  "editor.autoIndent": "full",
   "editor.insertSpaces": false,
   "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
   "editor.renderWhitespace": "all",
-
+  "editor.formatOnSave": true,
   "workbench.editor.scrollToSwitchTabs": true,
   "workbench.editor.focusRecentEditorAfterClose": false,
   "workbench.settings.editor": "json",
@@ -22,22 +23,18 @@
   "workbench.startupEditor": "newUntitledFile",
   "workbench.colorTheme": "Gruvbox Dark Medium",
   "workbench.iconTheme": "gruvbox-material-icon-theme",
-
   "explorer.sortOrder": "type",
   "explorer.confirmDragAndDrop": false,
-
   "window.confirmBeforeClose": "always",
-
   "terminal.integrated.fontFamily": "CaskaydiaCove Nerd Font",
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.cursorStyle": "block",
   "terminal.integrated.cursorBlinking": false,
   "terminal.integrated.gpuAcceleration": "auto",
-
   "debug.console.fontFamily": "CaskaydiaCove Nerd Font",
   "debug.console.fontSize": 12,
-
   "files.autoSave": "onFocusChange",
+  "files.trimTrailingWhitespace": true,
   "files.autoSaveDelay": 60000, // 1 min
   "files.associations": {
     "*.pdf_tex": "latex",
