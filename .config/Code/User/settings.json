@@ -63,7 +63,9 @@
   	"unpkg.com"
   ],
   "python.languageServer": "Pylance",
-
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.autopep8"
+  },
 // -----
 // LaTeX
 // -----
