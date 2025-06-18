@@ -345,7 +345,6 @@
       "COMPL"
   ],
   "todo-tree.regex.regex": "((%|//|#|<!--|;|/\\*|^)\\s*($TAGS)|^\\s*- \\[ \\])",
-  
   // ---
   // vim
   // ---
@@ -357,131 +356,264 @@
   "vim.sneak": true,
   "vim.insertModeKeyBindingsNonRecursive": [
     {
-      "before": ["j", "k"],
-      "after": ["<ESC>"]
+      "before": [
+        "j",
+        "k"
+      ],
+      "after": [
+        "<ESC>"
+      ]
     }
   ],
   "vim.operatorPendingModeKeyBindings": [
     // does not work, as expected!
     {
-        "before": ["L"],
-        "after": ["$"]
+      "before": [
+        "L"
+      ],
+      "after": [
+        "$"
+      ]
     },
     {
-        "before": ["H"],
-        "after": ["^"]
+      "before": [
+        "H"
+      ],
+      "after": [
+        "^"
+      ]
     }
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
     //to ommit linewraps
     {
-      "before": ["j"],
-      "after": ["g", "j"]
+      "before": [
+        "j"
+      ],
+      "after": [
+        "g",
+        "j"
+      ]
     },
     {
-      "before": ["k"],
-      "after": ["g", "k"]
+      "before": [
+        "k"
+      ],
+      "after": [
+        "g",
+        "k"
+      ]
     },
     {
-      "before": ["J"],
-      "after": ["5", "g", "j"]
+      "before": [
+        "J"
+      ],
+      "after": [
+        "5",
+        "g",
+        "j"
+      ]
     },
     {
-      "before": ["K"],
-      "after": ["5", "g", "k"]
+      "before": [
+        "K"
+      ],
+      "after": [
+        "5",
+        "g",
+        "k"
+      ]
     },
     {
-      "before": ["<Leader>", "j"],
-      "after": ["J"]
+      "before": [
+        "<Leader>",
+        "j"
+      ],
+      "after": [
+        "J"
+      ]
     },
     // jump to begin/end of line
     {
-      "before": ["L"],
-      "after": ["$"]
+      "before": [
+        "L"
+      ],
+      "after": [
+        "$"
+      ]
     },
     {
-        "before": ["H"],
-        "after": ["^"]
+      "before": [
+        "H"
+      ],
+      "after": [
+        "^"
+      ]
     },
     // splits
     {
-      "before": ["<C-h>"],
-      "after": ["<C-w>", "h"]
+      "before": [
+        "<C-h>"
+      ],
+      "after": [
+        "<C-w>",
+        "h"
+      ]
     },
     {
-      "before": ["<C-j>"],
-      "after": ["<C-w>", "j"]
+      "before": [
+        "<C-j>"
+      ],
+      "after": [
+        "<C-w>",
+        "j"
+      ]
     },
     {
-      "before": ["<C-k>"],
-      "after": ["<C-w>", "k"]
+      "before": [
+        "<C-k>"
+      ],
+      "after": [
+        "<C-w>",
+        "k"
+      ]
     },
     {
-      "before": ["<C-l>"],
-      "after": ["<C-w>", "l"]
+      "before": [
+        "<C-l>"
+      ],
+      "after": [
+        "<C-w>",
+        "l"
+      ]
     },
     // tabs
     {
-      "before": ["<Leader>", "t", "t"],
-      "commands": [":tabnew"]
+      "before": [
+        "<Leader>",
+        "t",
+        "t"
+      ],
+      "commands": [
+        ":tabnew"
+      ]
     },
     {
-      "before": ["<Leader>", "t", "n"],
-      "commands": [":tabnext"]
+      "before": [
+        "<Leader>",
+        "t",
+        "n"
+      ],
+      "commands": [
+        ":tabnext"
+      ]
     },
     {
-      "before": ["<Leader>", "q"],
-      "commands": [":q"]
+      "before": [
+        "<Leader>",
+        "q"
+      ],
+      "commands": [
+        ":q"
+      ]
     },
     {
-      "before": ["<Leader>", "t", "p"],
-      "commands": [":tabprev"]
+      "before": [
+        "<Leader>",
+        "t",
+        "p"
+      ],
+      "commands": [
+        ":tabprev"
+      ]
     },
     {
-      "before": ["<Leader>", "t", "o"],
-      "commands": [":tabo"]
+      "before": [
+        "<Leader>",
+        "t",
+        "o"
+      ],
+      "commands": [
+        ":tabo"
+      ]
     },
     {
-      "before": ["<Leader>", "/"],
-      "commands": [":noh"]
+      "before": [
+        "<Leader>",
+        "/"
+      ],
+      "commands": [
+        ":noh"
+      ]
     },
     {
-      "before": ["<C-w>",],
-      "after" : [":", "w", "q", "!", "<enter>"]
+      "before": [
+        "<C-w>",
+      ],
+      "after": [
+        ":",
+        "w",
+        "q",
+        "!",
+        "<enter>"
+      ]
     },
     // vscode commands
     {
-      "before": ["leader", "w"],
+      "before": [
+        "leader",
+        "w"
+      ],
       "commands": [
           "workbench.action.files.save",
       ]
     },
     {
-      "before": ["<Leader>", "p"],
+      "before": [
+        "<Leader>",
+        "p"
+      ],
       "commands": [
             "workbench.action.showCommands",
       ]
     },
     {
-      "before": ["<Leader>", "o"],
+      "before": [
+        "<Leader>",
+        "o"
+      ],
       "commands": [
           "workbench.action.gotoSymbol",
       ]
     }
   ],
   "vim.statusBarColorControl": false,
-  "vim.statusBarColors.normal": ["#989900", "#000"],
-  "vim.statusBarColors.insert": ["#418588", "#000"],
-  "vim.statusBarColors.visual": ["#b26086", "#000"],
-  "vim.statusBarColors.visualline": ["#b26086", "#000"],
-  "vim.statusBarColors.visualblock": ["#b26086", "#000"],
+  "vim.statusBarColors.normal": [
+    "#989900",
+    "#000"
+  ],
+  "vim.statusBarColors.insert": [
+    "#418588",
+    "#000"
+  ],
+  "vim.statusBarColors.visual": [
+    "#b26086",
+    "#000"
+  ],
+  "vim.statusBarColors.visualline": [
+    "#b26086",
+    "#000"
+  ],
+  "vim.statusBarColors.visualblock": [
+    "#b26086",
+    "#000"
+  ],
   "vim.statusBarColors.replace": "#ce220e",
   "vim.statusBarColors.commandlineinprogress": "#418588",
   "vim.statusBarColors.searchinprogressmode": "#418588",
   "vim.statusBarColors.easymotionmode": "#418588",
   "vim.statusBarColors.easymotioninputmode": "#418588",
   "vim.statusBarColors.surroundinputmode": "#418588",
-
 // ---
 // git
 // ---
@@ -492,7 +624,6 @@
   "gitlens.codeLens.enabled": false,
   "gitlens.currentLine.enabled": false,
   "gitlens.hovers.enabled": false,
-
 // ------
 // others
 // ------
