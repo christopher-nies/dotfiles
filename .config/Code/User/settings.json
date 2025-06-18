@@ -38,54 +38,51 @@
   "files.autoSaveDelay": 60000, // 1 min
   "files.associations": {
     "*.pdf_tex": "latex",
-	"*.tikz": "latex",
+    "*.tikz": "latex",
   },
-
   "security.workspace.trust.enabled": false,
   "update.mode": "none",
-
-
   "extensions.ignoreRecommendations": true,
-// ================================================================
-// EXTENSIONS
-// ================================================================
-
-// Python
+  // ================================================================
+  // EXTENSIONS
+  // ================================================================
+  // Python
   "code-runner.executorMap": {
-  	"python": "$pythonPath -u $fullFileName",
+    "python": "$pythonPath -u $fullFileName",
   },
   "code-runner.clearPreviousOutput": false,
   "code-runner.showExecutionMessage": false,
   "code-runner.runInTerminal": true,
   "python.condaPath": "$HOME/miniconda3/bin/conda",
   "jupyter.widgetScriptSources": [
-  	"jsdelivr.com",
-  	"unpkg.com"
+    "jsdelivr.com",
+    "unpkg.com"
   ],
   "python.languageServer": "Pylance",
   "[python]": {
     "editor.defaultFormatter": "ms-python.autopep8"
   },
-// -----
-// LaTeX
-// -----
+  // -----
+  // LaTeX
+  // -----
   "ltex.language": "de-DE",
   "ltex.dictionary": {
     "de-DE": [
-        ":~/Documents/ltex-de.txt"
-        ]
+      ":~/Documents/ltex-de.txt"
+    ]
   },
   "ltex.checkFrequency": "manual",
-  "ltex.latex.commands": {"\\includesvg[]{}": "ignore"},
-
+  "ltex.latex.commands": {
+    "\\includesvg[]{}": "ignore"
+  },
   "latex-workshop.latex.clean.method": "glob",
   "latex-workshop.latex.clean.subfolder.enabled": true,
   "latex-workshop.latex.clean.fileTypes": [
-	"*.acn",
-	"*.acr",
-	"*.alg",
+    "*.acn",
+    "*.acr",
+    "*.alg",
     "*.aux",
-	"*.dvi",
+    "*.dvi",
     "*.bbl",
     "*.blg",
     "*.idx",
@@ -103,8 +100,8 @@
     "*.snm",
     "*.synctex(busy)",
     "*.synctex.gz(busy)",
-	"*.synctex.gz",
-	"*.gz",
+    "*.synctex.gz",
+    "*.gz",
     "*.nav",
     "*.gz",
     "*.bcf",
@@ -118,15 +115,15 @@
   "latex-workshop.view.pdf.viewer": "external",
   "latex-workshop.view.pdf.external.viewer.command": "zathura",
   "latex-workshop.view.pdf.external.viewer.args": [
-	"--synctex-editor-command",
-	"code --no-sandbox -r -g %{input}:%{line}",
-	"%PDF%"
-   		],
+    "--synctex-editor-command",
+    "code --no-sandbox -r -g %{input}:%{line}",
+    "%PDF%"
+  ],
   "latex-workshop.view.pdf.external.synctex.command": "zathura",
   "latex-workshop.view.pdf.external.synctex.args": [
-	"--synctex-forward=%LINE%:0:%TEX%",
-	"%PDF%"
-	],
+    "--synctex-forward=%LINE%:0:%TEX%",
+    "%PDF%"
+  ],
   "latex-workshop.latex.tools": [
     {
       "name": "latexmk",
@@ -137,7 +134,7 @@
         "-file-line-error",
         "-pdf",
         "-outdir=%OUTDIR%",
-		"-shell-escape",
+        "-shell-escape",
         "%DOC%"
       ],
       "env": {}
@@ -303,9 +300,9 @@
       ]
     }
   ],
-// ---------
-// todo-tree
-// ---------
+  // ---------
+  // todo-tree
+  // ---------
   "todo-tree.highlights.defaultHighlight": {
     "icon": "hourglass",
     "type": "line",
@@ -335,12 +332,12 @@
     }
   },
   "todo-tree.general.tags": [
-      "XXX",
-      "TODO",
-      "HACK",
-      "FIXME",
-      "BUG",
-      "COMPL"
+    "XXX",
+    "TODO",
+    "HACK",
+    "FIXME",
+    "BUG",
+    "COMPL"
   ],
   "todo-tree.regex.regex": "((%|//|#|<!--|;|/\\*|^)\\s*($TAGS)|^\\s*- \\[ \\])",
   // ---
@@ -563,7 +560,7 @@
         "w"
       ],
       "commands": [
-          "workbench.action.files.save",
+        "workbench.action.files.save",
       ]
     },
     {
@@ -572,7 +569,7 @@
         "p"
       ],
       "commands": [
-            "workbench.action.showCommands",
+        "workbench.action.showCommands",
       ]
     },
     {
@@ -581,7 +578,7 @@
         "o"
       ],
       "commands": [
-          "workbench.action.gotoSymbol",
+        "workbench.action.gotoSymbol",
       ]
     }
   ],
@@ -612,9 +609,9 @@
   "vim.statusBarColors.easymotionmode": "#418588",
   "vim.statusBarColors.easymotioninputmode": "#418588",
   "vim.statusBarColors.surroundinputmode": "#418588",
-// ---
-// git
-// ---
+  // ---
+  // git
+  // ---
   "git.suggestSmartCommit": false,
   "git.confirmSync": false,
   "git.autofetch": "all",
@@ -622,11 +619,11 @@
   "gitlens.codeLens.enabled": false,
   "gitlens.currentLine.enabled": false,
   "gitlens.hovers.enabled": false,
-// ------
-// others
-// ------
+  // ------
+  // others
+  // ------
   "rewrap.wholeComment": true,
-  "rewrap.wrappingColumn": 80, 
+  "rewrap.wrappingColumn": 80,
   "comment-divider.mainHeaderAlign": "center",
   "comment-divider.mainHeaderFiller": "=",
   "comment-divider.shouldLengthIncludeIndent": true,
