@@ -43,6 +43,7 @@
   "security.workspace.trust.enabled": false,
   "update.mode": "none",
   "extensions.ignoreRecommendations": true,
+  "keyboard.dispatch": "keyCode",
   // ================================================================
   // EXTENSIONS
   // ================================================================
