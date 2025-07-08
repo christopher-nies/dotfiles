@@ -109,6 +109,7 @@
     "*.xml",
     "*.log"
   ],
+  "latex-workshop.formatting.latex": "latexindent",
   "latex-workshop.latex.autoBuild.run": "never",
   "latex-workshop.latex.recipe.default": "lastUsed",
   "latex-workshop.hover.preview.scale": 2,
