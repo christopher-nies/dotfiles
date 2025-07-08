@@ -18,10 +18,10 @@ if [[ ! -s $tmpfile ]]; then
 fi
 
 # Upload the image using curl
+# HINT: 'x-zipline-image-compression-percent: 80, converts image to `jpeg`!
 uploaded_url=$(curl -H "authorization: $TOKEN" "$URL" \
-    -F "file=@$tmpfile" \
+    -F "file=@$tmpfile;type=$(file --mime-type -b "$tmpfile")" \
     -H 'content-type: multipart/form-data' \
-    # compression converts automatically to *.jpg!
     -H 'x-zipline-image-compression-percent: 80' \
     -H 'x-zipline-format: random' | \
     jq -r .files[0].url)
