@@ -381,6 +381,40 @@
       ]
     }
   ],
+  "vim.visualModeKeyBindings": [
+    {
+      "before":[
+        "L"
+      ],
+      "after":[
+        "$"
+      ]
+    },
+    {
+      "before":[
+        "H"
+      ],
+      "after":[
+        "^"
+      ]
+    },
+    {
+      "before":[
+        "J"
+      ],
+      "after":[
+        "5j"
+      ]
+    },
+    {
+      "before":[
+        "K"
+      ],
+      "after":[
+        "5k"
+      ]
+    }
+  ],
   "vim.normalModeKeyBindingsNonRecursive": [
     //to ommit linewraps
     {
