@@ -631,4 +631,5 @@
   "comment-divider.length": 80,
   "comment-divider.subheaderAlign": "center",
   "chat.commandCenter.enabled": false,
+  "jupyter.askForKernelRestart": false,
 }
