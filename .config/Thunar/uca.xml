@@ -25,6 +25,19 @@
 	<directories/>
 </action>
 <action>
+	<icon>spray-mode-copy</icon>
+	<name>wl-copy</name>
+	<submenu></submenu>
+	<unique-id>1751966024257842-2</unique-id>
+	<command>wl-copy &lt; %f</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+</action>
+<action>
 	<icon>meld</icon>
 	<name>Compare</name>
 	<submenu></submenu>
