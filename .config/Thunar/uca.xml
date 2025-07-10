@@ -13,6 +13,18 @@
 	<directories/>
 </action>
 <action>
+	<icon>visual-studio-code</icon>
+	<name>Open with VSCode</name>
+	<submenu></submenu>
+	<unique-id>1751965651264453-1</unique-id>
+	<command>code %F</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<startup-notify/>
+	<directories/>
+</action>
+<action>
 	<icon>meld</icon>
 	<name>Compare</name>
 	<submenu></submenu>
