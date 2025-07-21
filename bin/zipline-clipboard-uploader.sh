@@ -22,7 +22,6 @@ fi
 uploaded_url=$(curl -H "authorization: $TOKEN" "$URL" \
     -F "file=@$tmpfile;type=$(file --mime-type -b "$tmpfile")" \
     -H 'content-type: multipart/form-data' \
-    -H 'x-zipline-image-compression-percent: 80' \
     -H 'x-zipline-format: random' | \
     jq -r .files[0].url)
 
