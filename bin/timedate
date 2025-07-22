@@ -1,6 +1,6 @@
 #!/bin/bash
 
-FILE="/home/chris/ownCloud/Nies-Altay/zeiten.csv"
+FILE="/home/chris/Nextcloud/Nies-Altay/zeiten.csv"
 
 CURRENT_DATETIME=$(date +"%Y-%m-%d %H:%M:%S")
 
