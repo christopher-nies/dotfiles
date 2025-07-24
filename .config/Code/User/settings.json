@@ -38,7 +38,7 @@
   "files.autoSaveDelay": 60000, // 1 min
   "files.associations": {
     "*.pdf_tex": "latex",
-    "*.tikz": "latex",
+    "*.tikz": "latex"
   },
   "security.workspace.trust.enabled": false,
   "update.mode": "none",
@@ -49,7 +49,7 @@
   // ================================================================
   // Python
   "code-runner.executorMap": {
-    "python": "$pythonPath -u $fullFileName",
+    "python": "$pythonPath -u $fullFileName"
   },
   "code-runner.clearPreviousOutput": false,
   "code-runner.showExecutionMessage": false,
@@ -66,7 +66,7 @@
   // -----
   // LaTeX
   // -----
-  "ltex.language":  "en-US",
+  "ltex.language": "en-US",
   "ltex.dictionary": {
     "de-DE": [
       ":~/Documents/ltex-de.txt"
@@ -309,28 +309,28 @@
     "icon": "hourglass",
     "type": "line",
     "foreground": "#000000",
-    "background": "#808080",
+    "background": "#808080"
   },
   "todo-tree.highlights.customHighlight": {
     "TODO": {
       "iconColour": "#72fff87e",
-      "background": "#72fff87e",
+      "background": "#72fff87e"
     },
     "FIXME": {
       "icon": "alert",
       "iconColour": "#e8f80080",
-      "background": "#e8f80080",
+      "background": "#e8f80080"
     },
     "COMPL": {
       "icon": "verified",
       "iconColour": "#00f80046",
-      "background": "#00f80044",
+      "background": "#00f80044"
     },
     "BUG": {
       "icon": "megaphone",
       "iconColour": "#f8000080",
       "background": "#f8000080",
-      "foreground": "#ffffff",
+      "foreground": "#ffffff"
     }
   },
   "todo-tree.general.tags": [
@@ -383,34 +383,34 @@
   ],
   "vim.visualModeKeyBindings": [
     {
-      "before":[
+      "before": [
         "L"
       ],
-      "after":[
+      "after": [
         "$"
       ]
     },
     {
-      "before":[
+      "before": [
         "H"
       ],
-      "after":[
+      "after": [
         "^"
       ]
     },
     {
-      "before":[
+      "before": [
         "J"
       ],
-      "after":[
+      "after": [
         "5j"
       ]
     },
     {
-      "before":[
+      "before": [
         "K"
       ],
-      "after":[
+      "after": [
         "5k"
       ]
     }
@@ -579,7 +579,7 @@
     },
     {
       "before": [
-        "<C-w>",
+        "<C-w>"
       ],
       "after": [
         ":",
@@ -596,7 +596,7 @@
         "w"
       ],
       "commands": [
-        "workbench.action.files.save",
+        "workbench.action.files.save"
       ]
     },
     {
@@ -605,7 +605,7 @@
         "p"
       ],
       "commands": [
-        "workbench.action.showCommands",
+        "workbench.action.showCommands"
       ]
     },
     {
@@ -614,7 +614,7 @@
         "o"
       ],
       "commands": [
-        "workbench.action.gotoSymbol",
+        "workbench.action.gotoSymbol"
       ]
     }
   ],
@@ -667,4 +667,5 @@
   "comment-divider.subheaderAlign": "center",
   "chat.commandCenter.enabled": false,
   "jupyter.askForKernelRestart": false,
+  "python.defaultInterpreterPath": "/bin/python"
 }
