@@ -1,6 +1,6 @@
-# use fastfetch (faster and maintained) instead of neofetch 
+# use fastfetch (faster and maintained) instead of neofetch
 if [[ -o interactive ]]; then
-    fastfetch 
+    fastfetch
 fi
 # EnablE Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -140,8 +140,6 @@ alias ll='eza -lAgh@ --all --icons --git --color=always --group-directories-firs
 
 alias vim='nvim'
 alias rr='ranger'
-
-alias code='/usr/bin/code --ozone-platform=wayland'
 
 # yt-dlp
 alias yt-hd='yt-dlp -f "best[height=720]/bestvideo[height=720]+bestaudio"'
