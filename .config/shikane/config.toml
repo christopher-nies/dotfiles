@@ -1,0 +1,21 @@
+[[profile]]
+name = "homeoffice"
+exec = ["notify-send shikane \"Profile $SHIKANE_PROFILE_NAME has been applied\""]
+    [[profile.output]]
+    enable = true
+    search = ["m=PHL 273V7", "s=UHB2045011854", "v=Philips Consumer Electronics Company"]
+    mode = "1920x1080@60Hz"
+    position = "1920,0"
+    scale = 1.0
+    transform = "normal"
+    adaptive_sync = false
+
+    [[profile.output]]
+    enable = true
+    search = ["m=0x0257", "s=", "v=LG Display"]
+    mode = "2560x1600@59.994Hz"
+    position = "0,0"
+    scale = 1.3333
+    transform = "normal"
+    adaptive_sync = false
+
