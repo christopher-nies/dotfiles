@@ -14,7 +14,7 @@ exec = ["notify-send shikane \"Profile $SHIKANE_PROFILE_NAME has been applied\""
     enable = true
     search = ["m=0x0257", "s=", "v=LG Display"]
     mode = "2560x1600@59.994Hz"
-    position = "2880,0"
+    position = "0,1620"
     scale = 1.33203125
     transform = "normal"
     adaptive_sync = false
