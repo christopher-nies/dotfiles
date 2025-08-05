@@ -1,4 +1,34 @@
 [[profile]]
+name = "office"
+exec = ["notify-send shikane \"Profile $SHIKANE_PROFILE_NAME has been applied\""]
+    [[profile.output]]
+    enable = true
+    search = ["m=DELL P2723QE", "s=HL79Z34", "v=Dell Inc."]
+    mode = "3840x2160@59.997Hz"
+    position = "0,0"
+    scale = 1.33203125
+    transform = "normal"
+    adaptive_sync = false
+
+    [[profile.output]]
+    enable = true
+    search = ["m=0x0257", "s=", "v=LG Display"]
+    mode = "2560x1600@59.994Hz"
+    position = "2880,0"
+    scale = 1.33203125
+    transform = "normal"
+    adaptive_sync = false
+
+    [[profile.output]]
+    enable = true
+    search = ["m=DELL P2419H", "s=1CBK1Y2", "v=Dell Inc."]
+    mode = "1920x1080@60Hz"
+    position = "-1080,0"
+    scale = 1.0
+    transform = "90"
+    adaptive_sync = false
+
+[[profile]]
 name = "homeoffice"
 exec = ["notify-send shikane \"Profile $SHIKANE_PROFILE_NAME has been applied\""]
     [[profile.output]]
