@@ -131,8 +131,6 @@ alias ll='eza -lAgh@ --all --icons --git --color=always --group-directories-firs
 alias vim='nvim'
 alias rr='ranger'
 
-alias code='/usr/bin/code --ozone-platform=wayland'
-
 # yt-dlp
 alias yt-hd='yt-dlp -f "best[height=720]/bestvideo[height=720]+bestaudio"'
 alias yt-fhd='yt-dlp -f "best[height=1080]/bestvideo[height=1080]+bestaudio"'
