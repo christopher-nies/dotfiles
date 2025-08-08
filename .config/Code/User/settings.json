@@ -55,10 +55,7 @@
   "code-runner.showExecutionMessage": false,
   "code-runner.runInTerminal": true,
   "python.condaPath": "$HOME/miniconda3/bin/conda",
-  "jupyter.widgetScriptSources": [
-    "jsdelivr.com",
-    "unpkg.com"
-  ],
+  "jupyter.widgetScriptSources": ["jsdelivr.com", "unpkg.com"],
   "python.languageServer": "Pylance",
   "[python]": {
     "editor.defaultFormatter": "ms-python.autopep8"
@@ -68,9 +65,7 @@
   // -----
   "ltex.language": "en-US",
   "ltex.dictionary": {
-    "de-DE": [
-      ":~/Documents/ltex-de.txt"
-    ]
+    "de-DE": [":~/Documents/ltex-de.txt"]
   },
   "ltex.checkFrequency": "manual",
   "ltex.latex.commands": {
@@ -170,9 +165,7 @@
     {
       "name": "latexmk_rconly",
       "command": "latexmk",
-      "args": [
-        "%DOC%"
-      ],
+      "args": ["%DOC%"],
       "env": {}
     },
     {
@@ -189,18 +182,13 @@
     {
       "name": "pdflatex_standalone",
       "command": "pdflatex",
-      "args": [
-        "-shell-escape",
-        "%DOC%"
-      ],
+      "args": ["-shell-escape", "%DOC%"],
       "env": {}
     },
     {
       "name": "bibtex",
       "command": "bibtex",
-      "args": [
-        "%DOCFILE%"
-      ],
+      "args": ["%DOCFILE%"],
       "env": {}
     },
     {
@@ -215,10 +203,7 @@
     {
       "name": "jnw2tex",
       "command": "julia",
-      "args": [
-        "-e",
-        "using Weave; weave(\"%DOC_EXT%\", doctype=\"tex\")"
-      ],
+      "args": ["-e", "using Weave; weave(\"%DOC_EXT%\", doctype=\"tex\")"],
       "env": {}
     },
     {
@@ -233,73 +218,46 @@
     {
       "name": "tectonic",
       "command": "tectonic",
-      "args": [
-        "--synctex",
-        "--keep-logs",
-        "%DOC%.tex"
-      ],
+      "args": ["--synctex", "--keep-logs", "%DOC%.tex"],
       "env": {}
     }
   ],
   "latex-workshop.latex.recipes": [
     {
       "name": "latexmk 🔃",
-      "tools": [
-        "latexmk"
-      ]
+      "tools": ["latexmk"]
     },
     {
       "name": "standalone 🖼",
-      "tools": [
-        "pdflatex_standalone"
-      ]
+      "tools": ["pdflatex_standalone"]
     },
     {
       "name": "latexmk (latexmkrc)",
-      "tools": [
-        "latexmk_rconly"
-      ]
+      "tools": ["latexmk_rconly"]
     },
     {
       "name": "latexmk (lualatex)",
-      "tools": [
-        "lualatexmk"
-      ]
+      "tools": ["lualatexmk"]
     },
     {
       "name": "latexmk (xelatex)",
-      "tools": [
-        "xelatexmk"
-      ]
+      "tools": ["xelatexmk"]
     },
     {
       "name": "pdflatex ➞ bibtex ➞ pdflatex × 2",
-      "tools": [
-        "pdflatex",
-        "bibtex",
-        "pdflatex",
-        "pdflatex"
-      ]
+      "tools": ["pdflatex", "bibtex", "pdflatex", "pdflatex"]
     },
     {
       "name": "Compile Rnw files",
-      "tools": [
-        "rnw2tex",
-        "latexmk"
-      ]
+      "tools": ["rnw2tex", "latexmk"]
     },
     {
       "name": "Compile Jnw files",
-      "tools": [
-        "jnw2tex",
-        "latexmk"
-      ]
+      "tools": ["jnw2tex", "latexmk"]
     },
     {
       "name": "tectonic",
-      "tools": [
-        "tectonic"
-      ]
+      "tools": ["tectonic"]
     }
   ],
   // ---------
@@ -333,14 +291,7 @@
       "foreground": "#ffffff"
     }
   },
-  "todo-tree.general.tags": [
-    "XXX",
-    "TODO",
-    "HACK",
-    "FIXME",
-    "BUG",
-    "COMPL"
-  ],
+  "todo-tree.general.tags": ["XXX", "TODO", "HACK", "FIXME", "BUG", "COMPL"],
   "todo-tree.regex.regex": "((%|//|#|<!--|;|/\\*|^)\\s*($TAGS)|^\\s*- \\[ \\])",
   // ---
   // vim
@@ -353,292 +304,136 @@
   "vim.sneak": true,
   "vim.insertModeKeyBindingsNonRecursive": [
     {
-      "before": [
-        "j",
-        "k"
-      ],
-      "after": [
-        "<ESC>"
-      ]
+      "before": ["j", "k"],
+      "after": ["<ESC>"]
     }
   ],
   "vim.operatorPendingModeKeyBindings": [
     // does not work, as expected!
     {
-      "before": [
-        "L"
-      ],
-      "after": [
-        "$"
-      ]
+      "before": ["L"],
+      "after": ["$"]
     },
     {
-      "before": [
-        "H"
-      ],
-      "after": [
-        "^"
-      ]
+      "before": ["H"],
+      "after": ["^"]
     }
   ],
   "vim.visualModeKeyBindings": [
     {
-      "before": [
-        "L"
-      ],
-      "after": [
-        "$"
-      ]
+      "before": ["L"],
+      "after": ["$"]
     },
     {
-      "before": [
-        "H"
-      ],
-      "after": [
-        "^"
-      ]
+      "before": ["H"],
+      "after": ["^"]
     },
     {
-      "before": [
-        "J"
-      ],
-      "after": [
-        "5j"
-      ]
+      "before": ["J"],
+      "after": ["5j"]
     },
     {
-      "before": [
-        "K"
-      ],
-      "after": [
-        "5k"
-      ]
+      "before": ["K"],
+      "after": ["5k"]
     }
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
     //to ommit linewraps
     {
-      "before": [
-        "j"
-      ],
-      "after": [
-        "g",
-        "j"
-      ]
+      "before": ["j"],
+      "after": ["g", "j"]
     },
     {
-      "before": [
-        "k"
-      ],
-      "after": [
-        "g",
-        "k"
-      ]
+      "before": ["k"],
+      "after": ["g", "k"]
     },
     {
-      "before": [
-        "J"
-      ],
-      "after": [
-        "5",
-        "g",
-        "j"
-      ]
+      "before": ["J"],
+      "after": ["5", "g", "j"]
     },
     {
-      "before": [
-        "K"
-      ],
-      "after": [
-        "5",
-        "g",
-        "k"
-      ]
+      "before": ["K"],
+      "after": ["5", "g", "k"]
     },
     {
-      "before": [
-        "<Leader>",
-        "j"
-      ],
-      "after": [
-        "J"
-      ]
+      "before": ["<Leader>", "j"],
+      "after": ["J"]
     },
     // jump to begin/end of line
     {
-      "before": [
-        "L"
-      ],
-      "after": [
-        "$"
-      ]
+      "before": ["L"],
+      "after": ["$"]
     },
     {
-      "before": [
-        "H"
-      ],
-      "after": [
-        "^"
-      ]
+      "before": ["H"],
+      "after": ["^"]
     },
     // splits
     {
-      "before": [
-        "<C-h>"
-      ],
-      "after": [
-        "<C-w>",
-        "h"
-      ]
+      "before": ["<C-h>"],
+      "after": ["<C-w>", "h"]
     },
     {
-      "before": [
-        "<C-j>"
-      ],
-      "after": [
-        "<C-w>",
-        "j"
-      ]
+      "before": ["<C-j>"],
+      "after": ["<C-w>", "j"]
     },
     {
-      "before": [
-        "<C-k>"
-      ],
-      "after": [
-        "<C-w>",
-        "k"
-      ]
+      "before": ["<C-k>"],
+      "after": ["<C-w>", "k"]
     },
     {
-      "before": [
-        "<C-l>"
-      ],
-      "after": [
-        "<C-w>",
-        "l"
-      ]
+      "before": ["<C-l>"],
+      "after": ["<C-w>", "l"]
     },
     // tabs
     {
-      "before": [
-        "<Leader>",
-        "t",
-        "t"
-      ],
-      "commands": [
-        ":tabnew"
-      ]
+      "before": ["<Leader>", "t", "t"],
+      "commands": [":tabnew"]
     },
     {
-      "before": [
-        "<Leader>",
-        "t",
-        "n"
-      ],
-      "commands": [
-        ":tabnext"
-      ]
+      "before": ["<Leader>", "t", "n"],
+      "commands": [":tabnext"]
     },
     {
-      "before": [
-        "<Leader>",
-        "q"
-      ],
-      "commands": [
-        ":q"
-      ]
+      "before": ["<Leader>", "q"],
+      "commands": [":q"]
     },
     {
-      "before": [
-        "<Leader>",
-        "t",
-        "p"
-      ],
-      "commands": [
-        ":tabprev"
-      ]
+      "before": ["<Leader>", "t", "p"],
+      "commands": [":tabprev"]
     },
     {
-      "before": [
-        "<Leader>",
-        "t",
-        "o"
-      ],
-      "commands": [
-        ":tabo"
-      ]
+      "before": ["<Leader>", "t", "o"],
+      "commands": [":tabo"]
     },
     {
-      "before": [
-        "<Leader>",
-        "/"
-      ],
-      "commands": [
-        ":noh"
-      ]
+      "before": ["<Leader>", "/"],
+      "commands": [":noh"]
     },
     {
-      "before": [
-        "<C-w>"
-      ],
-      "after": [
-        ":",
-        "w",
-        "q",
-        "!",
-        "<enter>"
-      ]
+      "before": ["<C-w>"],
+      "after": [":", "w", "q", "!", "<enter>"]
     },
     // vscode commands
     {
-      "before": [
-        "leader",
-        "w"
-      ],
-      "commands": [
-        "workbench.action.files.save"
-      ]
+      "before": ["leader", "w"],
+      "commands": ["workbench.action.files.save"]
     },
     {
-      "before": [
-        "<Leader>",
-        "p"
-      ],
-      "commands": [
-        "workbench.action.showCommands"
-      ]
+      "before": ["<Leader>", "p"],
+      "commands": ["workbench.action.showCommands"]
     },
     {
-      "before": [
-        "<Leader>",
-        "o"
-      ],
-      "commands": [
-        "workbench.action.gotoSymbol"
-      ]
+      "before": ["<Leader>", "o"],
+      "commands": ["workbench.action.gotoSymbol"]
     }
   ],
   "vim.statusBarColorControl": false,
-  "vim.statusBarColors.normal": [
-    "#989900",
-    "#000"
-  ],
-  "vim.statusBarColors.insert": [
-    "#418588",
-    "#000"
-  ],
-  "vim.statusBarColors.visual": [
-    "#b26086",
-    "#000"
-  ],
-  "vim.statusBarColors.visualline": [
-    "#b26086",
-    "#000"
-  ],
-  "vim.statusBarColors.visualblock": [
-    "#b26086",
-    "#000"
-  ],
+  "vim.statusBarColors.normal": ["#989900", "#000"],
+  "vim.statusBarColors.insert": ["#418588", "#000"],
+  "vim.statusBarColors.visual": ["#b26086", "#000"],
+  "vim.statusBarColors.visualline": ["#b26086", "#000"],
+  "vim.statusBarColors.visualblock": ["#b26086", "#000"],
   "vim.statusBarColors.replace": "#ce220e",
   "vim.statusBarColors.commandlineinprogress": "#418588",
   "vim.statusBarColors.searchinprogressmode": "#418588",
@@ -667,5 +462,6 @@
   "comment-divider.subheaderAlign": "center",
   "chat.commandCenter.enabled": false,
   "jupyter.askForKernelRestart": false,
-  "python.defaultInterpreterPath": "/bin/python"
+  "python.defaultInterpreterPath": "/bin/python",
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
 }
