@@ -463,5 +463,8 @@
   "chat.commandCenter.enabled": false,
   "jupyter.askForKernelRestart": false,
   "python.defaultInterpreterPath": "/bin/python",
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[toml]": {
+    "editor.defaultFormatter": "tamasfe.even-better-toml"
+  }
 }
