@@ -3,20 +3,52 @@ version = 3
 final_space = true
 
 [upgrade]
-  source = 'cdn'
-  interval = '168h'
-  auto = false
-  notice = false
+source = 'cdn'
+interval = '168h'
+auto = false
+notice = false
 
 [[blocks]]
-  type = 'prompt'
-  alignment = 'left'
+type = 'prompt'
+alignment = 'left'
+newline = true
 
-  [[blocks.segments]]
-    foreground = 'blue'
-    background = 'transparent'
-    type = 'path'
-    style = 'plain'
+[[blocks.segments]]
+foregroudn = 'blue'
+background = 'transparent'
+style = 'diamond'
+template = ' {{.Icon}} '
+type = 'os'
 
-    [blocks.segments.properties]
-      style = 'full'
+[[blocks.segments]]
+type = 'path'
+style = 'plain'
+foreground = 'blue'
+background = 'transparent'
+# template = '{{ .Path }}'
+
+[blocks.segments.properties]
+style = 'full'
+
+[[blocks.segments]]
+type = 'git'
+style = 'plain'
+foregraound = 'gray'
+backgroudn = 'transparent'
+template = '{{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }}'
+
+[blocks.segments.properties]
+branch_icon = ''
+fetch_status = true
+
+[[blocks]]
+type = 'prompt'
+alignment = 'left'
+newline = true
+
+[[blocks.segments]]
+type = 'text'
+style = 'plain'
+foreground = 'magenta'
+background = 'transparent'
+template = ''
