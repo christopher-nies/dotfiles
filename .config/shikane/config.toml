@@ -1,83 +1,113 @@
 [[profile]]
 name = "office"
-exec = ["notify-send shikane \"Profile $SHIKANE_PROFILE_NAME has been applied\""]
-    [[profile.output]]
-    enable = true
-    search = ["m=DELL P2723QE", "s=HL79Z34", "v=Dell Inc."]
-    mode = "3840x2160@59.997Hz"
-    position = "0,0"
-    scale = 1.33203125
-    transform = "normal"
-    adaptive_sync = false
+exec = [
+    "notify-send shikane \"Profile $SHIKANE_PROFILE_NAME has been applied\"",
+]
+[[profile.output]]
+enable = true
+search = ["m=DELL P2723QE", "s=HL79Z34", "v=Dell Inc."]
+mode = "3840x2160@59.997Hz"
+position = "0,0"
+scale = 1.33203125
+transform = "normal"
+adaptive_sync = false
 
-    [[profile.output]]
-    enable = true
-    search = ["m=0x0257", "s=", "v=LG Display"]
-    mode = "2560x1600@59.994Hz"
-    position = "0,1620"
-    scale = 1.33203125
-    transform = "normal"
-    adaptive_sync = false
+[[profile.output]]
+enable = true
+search = ["m=0x0257", "s=", "v=LG Display"]
+mode = "2560x1600@59.994Hz"
+position = "0,1620"
+scale = 1.33203125
+transform = "normal"
+adaptive_sync = false
 
-    [[profile.output]]
-    enable = true
-    search = ["m=DELL P2419H", "s=1CBK1Y2", "v=Dell Inc."]
-    mode = "1920x1080@60Hz"
-    position = "-1080,0"
-    scale = 1.0
-    transform = "90"
-    adaptive_sync = false
+[[profile.output]]
+enable = true
+search = ["m=DELL P2419H", "s=1CBK1Y2", "v=Dell Inc."]
+mode = "1920x1080@60Hz"
+position = "-1080,0"
+scale = 1.0
+transform = "90"
+adaptive_sync = false
 
 [[profile]]
 name = "homeoffice"
-exec = ["notify-send shikane \"Profile $SHIKANE_PROFILE_NAME has been applied\""]
-    [[profile.output]]
-    enable = true
-    search = ["m=PHL 273V7", "s=UHB2045011854", "v=Philips Consumer Electronics Company"]
-    mode = "1920x1080@60Hz"
-    position = "1920,0"
-    scale = 1.0
-    transform = "normal"
-    adaptive_sync = false
+exec = [
+    "notify-send shikane \"Profile $SHIKANE_PROFILE_NAME has been applied\"",
+]
+[[profile.output]]
+enable = true
+search = [
+    "m=PHL 273V7",
+    "s=UHB2045011854",
+    "v=Philips Consumer Electronics Company",
+]
+mode = "1920x1080@60Hz"
+position = "1920,0"
+scale = 1.0
+transform = "normal"
+adaptive_sync = false
 
-    [[profile.output]]
-    enable = true
-    search = ["m=0x0257", "s=", "v=LG Display"]
-    mode = "2560x1600@59.994Hz"
-    position = "0,0"
-    scale = 1.3333
-    transform = "normal"
-    adaptive_sync = false
+[[profile.output]]
+enable = true
+search = ["m=0x0257", "s=", "v=LG Display"]
+mode = "2560x1600@59.994Hz"
+position = "0,0"
+scale = 1.3333
+transform = "normal"
+adaptive_sync = false
 
 [[profile]]
 name = "desktop"
-exec = ["notify-send shikane \"Profile $SHIKANE_PROFILE_NAME has been applied\""]
-    [[profile.output]]
-    enable = true
-    search = ["m=PHL 273V7", "s=0x00002E4E", "v=Philips Consumer Electronics Company"]
-    mode = "1920x1080@60Hz"
-    position = "0,0"
-    scale = 1.0
-    transform = "normal"
-    adaptive_sync = false
+exec = [
+    "notify-send shikane \"Profile $SHIKANE_PROFILE_NAME has been applied\"",
+]
+[[profile.output]]
+enable = true
+search = [
+    "m=PHL 273V7",
+    "s=0x00002E4E",
+    "v=Philips Consumer Electronics Company",
+]
+mode = "1920x1080@60Hz"
+position = "0,0"
+scale = 1.0
+transform = "normal"
+adaptive_sync = false
 
-    [[profile.output]]
-    enable = true
-    search = ["m=G276HL", "s=LW9EE03285E3", "v=Acer Technologies"]
-    mode = "1920x1080@60Hz"
-    position = "1920,0"
-    scale = 1.0
-    transform = "normal"
-    adaptive_sync = false
+[[profile.output]]
+enable = true
+search = ["m=G276HL", "s=LW9EE03285E3", "v=Acer Technologies"]
+mode = "1920x1080@60Hz"
+position = "1920,0"
+scale = 1.0
+transform = "normal"
+adaptive_sync = false
 
 [[profile]]
-    name = "x1"
-    exec = ["notify-send shikane \"Profile $SHIKANE_PROFILE_NAME has been applied\""]
-    [[profile.output]]
-    enable = true
-    search = ["m=0x0419", "s=", "v=LG Display"]
-    mode = "2560x1440@60.004Hz"
-    position = "0,0"
-    scale = 1.0
-    transform = "normal"
-    adaptive_sync = false
+name = "x1"
+exec = [
+    "notify-send shikane \"Profile $SHIKANE_PROFILE_NAME has been applied\"",
+]
+[[profile.output]]
+enable = true
+search = ["m=0x0419", "s=", "v=LG Display"]
+mode = "2560x1440@60.004Hz"
+position = "0,0"
+scale = 1.0
+transform = "normal"
+adaptive_sync = false
+
+[[profile]]
+name = "latitude"
+exec = [
+    "notify-send shikane \"Profile $SHIKANE_PROFILE_NAME has been applied\"",
+]
+[[profile.output]]
+enable = true
+search = ["m=0x0257", "s=", "v=LG Display"]
+mode = "2560x1600@59.994Hz"
+position = "0,1620"
+scale = 1.333
+transform = "normal"
+adaptive_sync = false
