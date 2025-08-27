@@ -52,21 +52,23 @@ workspace_empty = "<span font_family='Roboto' size='14pt'>{id}</span>{delim}{cli
 # "zsh" = "*Zsh*"
 
 [title_in_class."(?i)brave"]
-"Open WebUI" = ":openai:"
-"Bitwarden" = ":bit_warden:"
-"Home Assistant" = ":home_assistant:"
-"Todoist" = ":todoist:"
-"Outlook" = ":microsoft_outlook:"
-"Webex" = ":webex:"
-"Readeck" = ":readeck:"
-"Linkwarden" = ":linkwarden:"
-"WhatsApp Web" = ":whats_app:"
-"ResearchRabbit" = ":researchrabbit:"
+# intended for PWAs
+#"Open WebUI" = ":openai:"
+#"Bitwarden" = ":bit_warden:"
+#"Home Assistant" = ":home_assistant:"
+#"Todoist" = ":todoist:"
+#"Outlook" = ":microsoft_outlook:"
+#"Webex" = ":webex:"
+#"Readeck" = ":readeck:"
+#"Linkwarden" = ":linkwarden:"
+#"WhatsApp Web" = ":whats_app:"
+#"ResearchRabbit" = ":researchrabbit:"
 
 [title_in_class."(?i)chrome"]
-"Calendar" = ":calendar:"
-"NotebookLM" = ":notebooklm:"
-"Claude" = ":claude:"
+# intended for PWAs
+#"Calendar" = ":calendar:"
+#"NotebookLM" = ":notebooklm:"
+#"Claude" = ":claude:"
 
 
 [class]
