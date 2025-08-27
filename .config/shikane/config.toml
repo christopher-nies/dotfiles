@@ -8,7 +8,7 @@ enable = true
 search = ["m=DELL P2723QE", "s=HL79Z34", "v=Dell Inc."]
 mode = "3840x2160@59.997Hz"
 position = "0,0"
-scale = 1.33203125
+scale = 1.3333
 transform = "normal"
 adaptive_sync = false
 
@@ -17,7 +17,7 @@ enable = true
 search = ["m=0x0257", "s=", "v=LG Display"]
 mode = "2560x1600@59.994Hz"
 position = "0,1620"
-scale = 1.33203125
+scale = 1.3333
 transform = "normal"
 adaptive_sync = false
 
@@ -107,7 +107,7 @@ exec = [
 enable = true
 search = ["m=0x0257", "s=", "v=LG Display"]
 mode = "2560x1600@59.994Hz"
-position = "0,1620"
-scale = 1.333
+position = "0,0"
+scale = 1.3333
 transform = "normal"
 adaptive_sync = false
