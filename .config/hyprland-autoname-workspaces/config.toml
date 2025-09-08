@@ -102,6 +102,7 @@ DEFAULT = ":default:"
 "qalculate-gtk" = ":calculator:"
 "com.github.xournalpp.xournalpp" = ":xournal:"
 "com.obsproject.Studio" = ":obsstudio:"
+"xdg-desktop-portal-gtk" = ":finder:"
 
 # anki 
 # nextcloud 
