@@ -20,7 +20,7 @@
 		// "idle_inhibitor",
 		"custom/updates",
     "custom/timer",
-		"pulseaudio",
+		// "pulseaudio",
 		"network",
 		// "power-profiles-daemon",
 		// "cpu",
