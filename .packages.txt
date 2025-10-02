@@ -257,6 +257,7 @@ lsb-release
 lshw
 lsscsi
 lvm2
+mako
 man-db
 man-pages
 mc
@@ -405,6 +406,7 @@ sublime-text-4
 sudo
 surfn-icons-git
 swaync
+swayosd
 syslinux
 system-config-printer
 tcpdump
