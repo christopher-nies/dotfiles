@@ -1,7 +1,13 @@
 {
+  "ide": {
+    "enabled": true
+  },
   "security": {
     "auth": {
       "selectedType": "gemini-api-key"
     }
+  },
+  "ui": {
+    "theme": "Ayu"
   }
 }
