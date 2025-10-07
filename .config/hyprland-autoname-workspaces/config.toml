@@ -103,6 +103,7 @@ DEFAULT = ":default:"
 "com.github.xournalpp.xournalpp" = ":xournal:"
 "com.obsproject.Studio" = ":obsstudio:"
 "xdg-desktop-portal-gtk" = ":finder:"
+"Docker Desktop" = ":docker:"
 
 # anki 
 # nextcloud 
