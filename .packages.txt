@@ -94,6 +94,8 @@ chafa
 cheese
 chromium
 chrony
+claude-desktop-bin
+claude-desktop-native
 cliphist
 clonezilla
 conky-lua-archers
@@ -113,6 +115,7 @@ dmenu
 dmidecode
 dmraid
 dnsmasq
+docker-desktop
 dosfstools
 downgrade
 duf
