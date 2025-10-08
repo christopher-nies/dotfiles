@@ -94,7 +94,6 @@ chafa
 cheese
 chromium
 chrony
-claude-desktop-bin
 claude-desktop-native
 cliphist
 clonezilla
@@ -104,6 +103,7 @@ cryptsetup
 cups
 cups-filters
 cups-pdf
+cursor-bin
 cute-sway-recorder-git
 dconf-editor
 ddrescue
