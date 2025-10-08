@@ -104,6 +104,7 @@ DEFAULT = ":default:"
 "com.obsproject.Studio" = ":obsstudio:"
 "xdg-desktop-portal-gtk" = ":finder:"
 "Docker Desktop" = ":docker:"
+"Claude" = ":claude:"
 
 # anki 
 # nextcloud 
