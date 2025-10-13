@@ -117,7 +117,7 @@ window#waybar.empty #window {
 
 #window,
 #workspaces {
-	margin: 0 4px;
+	margin: 0 0px;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
