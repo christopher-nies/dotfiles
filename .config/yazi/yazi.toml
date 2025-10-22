@@ -11,3 +11,6 @@ run  = "git"
 [mgr]
 ratio = [1, 2, 3]
 sort_by = "extension"
+
+[preview]
+wrap = "yes"
