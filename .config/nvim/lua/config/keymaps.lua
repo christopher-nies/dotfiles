@@ -24,5 +24,5 @@ vim.api.nvim_set_keymap("v", "<Leader>y", '"+y', { noremap = true, silent = true
 vim.api.nvim_set_keymap("v", "<Leader>p", '"+p', { noremap = true, silent = true })
 
 -- Quit and write
-vim.api.nvim_set_keymap("n", "<leader>q", ":q<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<leader>w", ":w<CR>", { noremap = true, silent = true })
+--vim.api.nvim_set_keymap("n", "<leader>q", ":q<CR>", { noremap = true, silent = true })
+--vim.api.nvim_set_keymap("n", "<leader>w", ":w<CR>", { noremap = true, silent = true })
