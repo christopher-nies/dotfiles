@@ -186,6 +186,9 @@ alias pacman="sudo pacman --color auto"
 alias update="sudo pacman -Syyu"
 alias upd="sudo pacman -Syyu"
 
+# paru 
+alias upall="paru -Syu --noconfirm"
+
 # exa instead of classic ls command
 alias la='eza -lA --sort=extension --color=always --group-directories-first --icons'
 alias ls='eza'
