@@ -466,5 +466,8 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[toml]": {
     "editor.defaultFormatter": "tamasfe.even-better-toml"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
   }
 }
