@@ -231,6 +231,7 @@ alias rams='rate-mirrors --allow-root --disable-comments --protocol https arch  
 
 # autosuggestions keybinding
 bindkey ';' autosuggest-accept
+bindkey '^H' backward-kill-word
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
