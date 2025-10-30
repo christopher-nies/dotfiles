@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# Your Obsidian vault root
+VAULT="$HOME/Documents/vault"
+
+# Get today's date components
+YEAR=$(date +%Y)
+YEAR_MONTH=$(date +%Y-%m)
+DAY=$(date +%Y-%m-%d)
+
+# Build the full path
+CALENDAR_PATH="$VAULT/Calendar/$YEAR/$YEAR_MONTH"
+FILE="$CALENDAR_PATH/$DAY.md"
+
+# Ensure the directory exists
+mkdir -p "$CALENDAR_PATH"
+
+# Get current time and input text
+TIME=$(date +%H:%M)
+TEXT="$*"
+
+# Append the new entry
+echo "- $TIME $TEXT" >> "$FILE"
+
+# Optional: Notify
+notify-send "Obsidian Daily Note" "Appended: $TIME $TEXT"
