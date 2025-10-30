@@ -187,7 +187,7 @@ alias update="sudo pacman -Syyu"
 alias upd="sudo pacman -Syyu"
 
 # paru 
-alias upall="paru -Syu --noconfirm"
+alias upall="paru -Syyu"
 
 # exa instead of classic ls command
 alias la='eza -lA --sort=extension --color=always --group-directories-first --icons'
