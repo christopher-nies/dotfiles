@@ -38,7 +38,8 @@
   "files.autoSaveDelay": 60000, // 1 min
   "files.associations": {
     "*.pdf_tex": "latex",
-    "*.tikz": "latex"
+    "*.tikz": "latex",
+    "*.keymap": "c",
   },
   "security.workspace.trust.enabled": false,
   "update.mode": "none",
