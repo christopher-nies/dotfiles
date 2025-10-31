@@ -1,5 +1,12 @@
 #!/bin/bash
+set -e
 
-source $HOME/miniconda3/bin/activate nerd-dictation
+ffplay -nodisp -autoexit "$HOME/Music/sounds/siri-sound-start.mp3"
+"$HOME/Documents/repos/nerd-dictation/nerd-dictation" begin \
+    --vosk-model-dir="$HOME/Documents/repos/nerd-dictation/model" \
+    --simulate-input-tool=YDOTOOL \
+    --pulse-device-name=alsa_input.usb-SunplusIT_Inc_FHD_Camera_Microphone_01.00.00-02.analog-stereo
 
-python3 $HOME/.config/nerd-dictation/nerd-dictation begin --vosk-model=$HOME/.config/nerd-dictation/model/en_small --simulate-input-tool YDOTOOL
+#source $HOME/miniconda3/bin/activate nerd-dictation
+
+#python3 $HOME/.config/nerd-dictation/nerd-dictation begin --vosk-model=$HOME/.config/nerd-dictation/model/en_small --simulate-input-tool YDOTOOL
