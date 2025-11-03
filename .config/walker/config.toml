@@ -28,10 +28,10 @@ quick_activate = []
 [providers]
 default = [
   "desktopapplications",
-  "calc",
-  "runner",
-  "menus",
-  "websearch",
+  # "calc",
+  # "runner",
+  # "menus",
+  # "websearch",
 ] # providers to be queried by default
 empty = ["desktopapplications"] # providers to be queried when query is empty
 max_results = 50 # global max results
