@@ -10,6 +10,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 eval "$(zoxide init zsh)"
+eval "$(keychain --eval --quiet id_ed25519)"
 
 # yazi
 # use `y` to launch `yazi`. `q` quit to cwd, `Q` to quit
