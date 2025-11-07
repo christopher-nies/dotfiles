@@ -139,6 +139,17 @@
 	<other-files/>
 </action>
 <action>
+	<icon>cm_extractfiles</icon>
+	<name>unzip here</name>
+	<submenu></submenu>
+	<unique-id>1762501374549356-1</unique-id>
+	<command>unzip %n</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*.zip</patterns>
+	<other-files/>
+</action>
+<action>
 	<icon>cs-startup-programs</icon>
 	<name>Run</name>
 	<submenu></submenu>
