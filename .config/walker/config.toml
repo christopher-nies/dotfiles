@@ -75,15 +75,6 @@ provider = "clipboard"
 prefix = "$"
 provider = "windows"
 
-[[providers.prefixes]]
-prefix = "_"
-provider = "runner"
-
-[providers.runner]
-commands = [
-  { prefix = "_", cmd = "~/bin/obsidian_daily_append {query}", name = "Obsidian Daily Append" }
-]
-
 [providers.clipboard]
 time_format = "%d.%m. - %H:%M" # format for the clipboard item date
 
