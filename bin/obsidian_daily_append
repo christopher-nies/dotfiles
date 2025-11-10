@@ -1,4 +1,15 @@
 #!/bin/bash
+# Quick note to Obsidian daily note via Walker dmenu
+
+# Get input from Walker dmenu
+input=$(echo "" | walker -d -I -p "Add to daily note:")
+
+# If input is empty, print error and exit
+if [ -z "$input" ]; then
+  echo "Error: no input provided" >&2
+  notify-send "Obsidian Daily Note" "No text provided. Please insert text!"
+  exit 1
+fi
 
 # Your Obsidian vault root
 VAULT="$HOME/Documents/vault"
@@ -17,10 +28,10 @@ mkdir -p "$CALENDAR_PATH"
 
 # Get current time and input text
 TIME=$(date +%H:%M)
-TEXT="$*"
+TEXT="$input"
 
 # Append the new entry
 echo "- $TIME $TEXT" >> "$FILE"
 
 # Optional: Notify
-notify-send "Obsidian Daily Note" "Appended: $TIME $TEXT"
+# notify-send "Obsidian Daily Note" "Appended: $TIME $TEXT"
