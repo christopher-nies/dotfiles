@@ -1,0 +1,43 @@
+#!/bin/bash
+
+# Directory where the external notes are stored
+EXTERNAL_DIR="$HOME/Nextcloud/Notes/daily-notes"
+
+# Base directory of your Obsidian vault
+OBSIDIAN_BASE_DIR="$HOME/Documents/vault/Calendar"
+
+# Find all markdown files in the external directory
+find "$EXTERNAL_DIR" -type f -name "*.md" | while read -r EXTERNAL_NOTE; do
+    # Extract the date from the filename, assuming it's named as YYYY-MM-DD.md
+    FILENAME=$(basename "$EXTERNAL_NOTE")
+    NOTE_DATE="${FILENAME%%.md}"
+
+    # Calculate year and month from the note date
+    YEAR="${NOTE_DATE:0:4}"
+    MONTH="${NOTE_DATE:0:7}"
+    OBSIDIAN_YEAR_DIR="${OBSIDIAN_BASE_DIR}/${YEAR}"
+    OBSIDIAN_MONTH_DIR="${OBSIDIAN_YEAR_DIR}/${MONTH}"
+
+    # Define the path for the Obsidian daily note
+    OBSIDIAN_NOTE="${OBSIDIAN_MONTH_DIR}/${NOTE_DATE}.md"
+
+    # Ensure the Obsidian year and month directories exist
+    if [[ ! -d "$OBSIDIAN_MONTH_DIR" ]]; then
+        mkdir -p "$OBSIDIAN_MONTH_DIR"
+    fi
+
+    # Create the Obsidian note if it does not exist
+    if [[ ! -f "$OBSIDIAN_NOTE" ]]; then
+        touch "$OBSIDIAN_NOTE"
+        echo "# Daily Note for $NOTE_DATE" >"$OBSIDIAN_NOTE"
+    fi
+
+    # Append content from the external note to the Obsidian note
+    # Use a timestamp to indicate when the content was appended
+    {
+        echo -e "\n---"
+        cat "$EXTERNAL_NOTE"
+    } >>"$OBSIDIAN_NOTE"
+
+    echo "Successfully appended content from $EXTERNAL_NOTE to $OBSIDIAN_NOTE."
+done
