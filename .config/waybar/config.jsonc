@@ -103,7 +103,7 @@
   "clock": {
     "timezone": "Europe/Berlin",
     "format": "{:%H:%M}",
-    "format-alt": "{:%A, %B %d, %Y (%R)}",
+    "format-alt": "{:%a, %d.%m.%Y, %R}",
     "tooltip-format": "<tt><big>{calendar}</big></tt>",
     "calendar": {
       "locale": "de_DE",
