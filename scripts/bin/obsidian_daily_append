@@ -24,7 +24,7 @@ else
     placeholder="Add to daily note:"
 fi
 
-# Get input from Walker dmenu with placeholder as prompt
+# First prompt: Get text input
 input=$(echo "" | walker -d -I -p "$placeholder")
 
 # If input is empty, print error and exit
@@ -34,15 +34,26 @@ if [ -z "$input" ]; then
     exit 1
 fi
 
+# Second prompt: Select mode (new or append)
+mode=$(echo -e "new\nappend" | walker -d -p "Select mode:")
+
+# If mode is empty, default to new
+if [ -z "$mode" ]; then
+    mode="new"
+fi
+
 # Ensure the directory exists
 mkdir -p "$CALENDAR_PATH"
 
-# Get current time and input text
-TIME=$(date +%H:%M)
-TEXT="$input"
-
-# Append the new entry
-echo "- $TIME $TEXT" >>"$FILE"
+# Append based on mode
+if [ "$mode" = "new" ]; then
+    # New entry with timestamp
+    TIME=$(date +%H:%M)
+    echo "- $TIME $input" >> "$FILE"
+else
+    # Append entry with tab indentation, no timestamp
+    echo -e "\t- $input" >> "$FILE"
+fi
 
 # Optional: Notify
 # notify-send "Obsidian Daily Note" "Appended: $TIME $TEXT"
