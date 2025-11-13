@@ -82,8 +82,8 @@ DEFAULT = ":default:"
 "obsidian" = ":obsidian:"
 "firefox" = ":firefox:"
 "Zotero" = ":zotero:"
-"zathura" = ":pdf:"
-"org.kde.okular" = ":pdf:"
+"zathura" = ":pdf_old:"
+"org.kde.okular" = ":pdf_old:"
 "evince" = ":pdf:"
 "Thunar" = ":finder:"
 "thunar" = ":finder:"
@@ -106,6 +106,7 @@ DEFAULT = ":default:"
 "xdg-desktop-portal-gtk" = ":finder:"
 "Docker Desktop" = ":docker:"
 "Claude" = ":claude:"
+"AppFlowy" = ":appflowy:"
 
 # anki 
 # nextcloud 
