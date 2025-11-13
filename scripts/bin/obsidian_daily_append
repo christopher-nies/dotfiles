@@ -1,16 +1,6 @@
 #!/bin/bash
 # Quick note to Obsidian daily note via Walker dmenu
 
-# Get input from Walker dmenu
-input=$(echo "" | walker -d -I -p "Add to daily note:")
-
-# If input is empty, print error and exit
-if [ -z "$input" ]; then
-  echo "Error: no input provided" >&2
-  notify-send "Obsidian Daily Note" "No text provided. Please insert text!"
-  exit 1
-fi
-
 # Your Obsidian vault root
 VAULT="$HOME/Documents/vault"
 
@@ -23,6 +13,27 @@ DAY=$(date +%Y-%m-%d)
 CALENDAR_PATH="$VAULT/Calendar/$YEAR/$YEAR_MONTH"
 FILE="$CALENDAR_PATH/$DAY.md"
 
+# Get the last non-empty line from the file if it exists as placeholder
+if [ -f "$FILE" ]; then
+    placeholder=$(grep -v '^[[:space:]]*$' "$FILE" | tail -n 1)
+    # If no non-empty line found, use default
+    if [ -z "$placeholder" ]; then
+        placeholder="Add to daily note:"
+    fi
+else
+    placeholder="Add to daily note:"
+fi
+
+# Get input from Walker dmenu with placeholder as prompt
+input=$(echo "" | walker -d -I -p "$placeholder")
+
+# If input is empty, print error and exit
+if [ -z "$input" ]; then
+    echo "Error: no input provided" >&2
+    notify-send "Obsidian Daily Note" "No text provided. Please insert text!"
+    exit 1
+fi
+
 # Ensure the directory exists
 mkdir -p "$CALENDAR_PATH"
 
@@ -31,7 +42,8 @@ TIME=$(date +%H:%M)
 TEXT="$input"
 
 # Append the new entry
-echo "- $TIME $TEXT" >> "$FILE"
+echo "- $TIME $TEXT" >>"$FILE"
 
 # Optional: Notify
 # notify-send "Obsidian Daily Note" "Appended: $TIME $TEXT"
+
