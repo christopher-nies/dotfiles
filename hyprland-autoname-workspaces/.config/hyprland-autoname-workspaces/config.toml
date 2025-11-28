@@ -107,6 +107,7 @@ DEFAULT = ":default:"
 "Docker Desktop" = ":docker:"
 "Claude" = ":claude:"
 "AppFlowy" = ":appflowy:"
+"winboat" = ":windows_app:"
 
 # anki 
 # nextcloud 
