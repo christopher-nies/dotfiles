@@ -54,7 +54,7 @@ workspace_empty = "<span font_family='Roboto' size='14pt'>{id}</span>{delim}{cli
 [title_in_class."(?i)brave"]
 # intended for PWAs
 #"Open WebUI" = ":openai:"
-#"Bitwarden" = ":bit_warden:"
+"(?i)bitwarden" = ":bit_warden:"
 #"Home Assistant" = ":home_assistant:"
 #"Todoist" = ":todoist:"
 #"Outlook" = ":microsoft_outlook:"
@@ -94,7 +94,7 @@ DEFAULT = ":default:"
 "discord" = ":discord:"
 "blender" = ":blender:"
 "org.inkscape.Inkscape" = ":inkscape:"
-"spotify" = ":spotify:"
+"(?i)spotify" = ":spotify:"
 "vlc" = ":vlc:"
 "chromium" = ":google_chrome:"
 "Chromium" = ":google_chrome:"
