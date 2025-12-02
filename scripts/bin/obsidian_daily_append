@@ -49,12 +49,11 @@ mkdir -p "$CALENDAR_PATH"
 if [ "$mode" = "new" ]; then
     # New entry with timestamp
     TIME=$(date +%H:%M)
-    echo "- $TIME $input" >> "$FILE"
+    printf "\n- %s %s" "$TIME" "$input" >>"$FILE"
 else
     # Append entry with tab indentation, no timestamp
-    echo -e "\t- $input" >> "$FILE"
+    printf "\n\t- %s" "$input" >>"$FILE"
 fi
 
 # Optional: Notify
 # notify-send "Obsidian Daily Note" "Appended: $TIME $TEXT"
-
