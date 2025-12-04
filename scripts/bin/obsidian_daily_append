@@ -2,7 +2,7 @@
 # Quick note to Obsidian daily note via Walker dmenu
 
 # Your Obsidian vault root
-VAULT="$HOME/Documents/vault"
+VAULT="$HOME/Documents/obsidian/vault"
 
 # Get today's date components
 YEAR=$(date +%Y)
