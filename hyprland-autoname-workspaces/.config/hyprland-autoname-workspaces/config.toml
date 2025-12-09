@@ -108,7 +108,7 @@ DEFAULT = ":default:"
 "Claude" = ":claude:"
 "AppFlowy" = ":appflowy:"
 "winboat" = ":windows_app:"
-"Antigravity" = ":antigravity:"
+"(?i)antigravity" = ":antigravity:"
 
 # anki 
 # nextcloud 
