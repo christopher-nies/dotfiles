@@ -111,7 +111,7 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 # Define the base directory for Obsidian notes
-obsidian_base="$HOME/Documents/vault"
+obsidian_base="$HOME/Documents/obsidian/vault"
 
 # Loop through all files in the ~/.config/fabric/patterns directory
 for pattern_file in ~/.config/fabric/patterns/*; do
