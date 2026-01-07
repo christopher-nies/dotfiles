@@ -1,0 +1,10 @@
+#!/bin/bash
+# Simple web scraper using Jina Reader API
+# Usage: webscrape <url>
+
+if [ $# -eq 0 ]; then
+    echo "Usage: webscrape <url>" >&2
+    exit 1
+fi
+
+curl -s "https://r.jina.ai/$1"
