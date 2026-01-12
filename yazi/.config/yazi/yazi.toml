@@ -1,11 +1,11 @@
 [[plugin.prepend_fetchers]]
 id   = "git"
-name = "*"
+url  = "*"
 run  = "git"
 
 [[plugin.prepend_fetchers]]
 id   = "git"
-name = "*/"
+url  = "*/"
 run  = "git"
 
 [mgr]
@@ -17,7 +17,7 @@ wrap = "yes"
 
 [plugin]
 previewers = [
-	{ name = "*/", run = "folder", sync = true },
+	{ url = "*/", run = "folder", sync = true },
 	# Code
 	{ mime = "text/*", run = "code" },
 	{ mime = "*/{xml,javascript,x-wine-extension-ini}", run = "code" },
@@ -37,6 +37,6 @@ previewers = [
 	{ mime = "font/*", run = "font" },
 	{ mime = "application/vnd.ms-opentype", run = "font" },
 	# Fallback
-	{ name = "*", run = "file" },
+	{ url = "*", run = "file" },
 ]
 
