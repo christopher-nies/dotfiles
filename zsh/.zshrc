@@ -209,6 +209,9 @@ alias iinktex='inkscape --export-area-drawing --export-type="pdf" --export-latex
 alias homeup='nmcli connection up home'
 alias homedown='nmcli connection down home'
 
+# obsidian paths 
+export vault="$HOME/Documents/obsidian/vault"
+
 #get fastest mirrors in your neighborhood
 alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist"
 alias mirrord="sudo reflector --latest 30 --number 10 --sort delay --save /etc/pacman.d/mirrorlist"
