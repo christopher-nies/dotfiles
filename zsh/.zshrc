@@ -205,13 +205,7 @@ alias yt-fhd='yt-dlp -f "best[height=1080]/bestvideo[height=1080]+bestaudio"'
 alias inktex='inkscape --export-area-page --export-type="pdf" --export-latex'
 alias iinktex='inkscape --export-area-drawing --export-type="pdf" --export-latex'
 
-# connect to uni-vpn (ovpn)
-alias uniup='nmcli connection up uni'
-alias unidown='nmcli connection down uni'
-
-alias adminup='nmcli connection up admin'
-alias admindown='nmcli connection down admin'
-
+# connect to vpn
 alias homeup='nmcli connection up home'
 alias homedown='nmcli connection down home'
 
