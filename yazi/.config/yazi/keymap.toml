@@ -2,4 +2,6 @@
 prepend_keymap = [
 	{ on = "J", run = "arrow 5", desc = "Next 5 files" },
 	{ on = "K", run = "arrow -5", desc = "Prev 5 files" },
+	{ on = "<C-j>", run = "seek 5", desc = "Next 5 lines in preview pane" },
+	{ on = "<C-k>", run = "seek -5", desc = "Prev 5 lines in preview pane" },
 ]
