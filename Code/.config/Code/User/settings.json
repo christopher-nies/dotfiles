@@ -293,6 +293,16 @@
     }
   },
   "todo-tree.general.tags": ["XXX", "TODO", "HACK", "FIXME", "BUG", "COMPL"],
+  "todo-tree.general.tags": [
+        "BUG",
+        "HACK",
+        "FIXME",
+        "TODO",
+        "COMPL",
+        "XXX",
+        "[ ]",
+        "[x]"
+    ]
   "todo-tree.regex.regex": "((%|//|#|<!--|;|/\\*|^)\\s*($TAGS)|^\\s*- \\[ \\])",
   // ---
   // vim
