@@ -13,6 +13,7 @@ set selection-clipboard clipboard
 set window-height 1080
 set window-width 1920 
 set guioptions none
+set window-title-basename true
 
 # synctex
 set synctex "true"
