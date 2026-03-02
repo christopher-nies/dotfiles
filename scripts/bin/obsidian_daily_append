@@ -1,26 +1,9 @@
 #!/bin/bash
 # Quick note to Obsidian daily note via Walker dmenu
 
-# Your Obsidian vault root
-VAULT="$HOME/Documents/obsidian/vault"
-
-# Get today's date components
-YEAR=$(date +%Y)
-YEAR_MONTH=$(date +%Y-%m)
-DAY=$(date +%Y-%m-%d)
-
-# Build the full path
-CALENDAR_PATH="$VAULT/Calendar/$YEAR/$YEAR_MONTH"
-FILE="$CALENDAR_PATH/$DAY.md"
-
-# Get the last non-empty line from the file if it exists as placeholder
-if [ -f "$FILE" ]; then
-    placeholder=$(grep -v '^[[:space:]]*$' "$FILE" | tail -n 1)
-    # If no non-empty line found, use default
-    if [ -z "$placeholder" ]; then
-        placeholder="Add to daily note:"
-    fi
-else
+# Get the last non-empty line from daily note as placeholder
+placeholder=$(obsidian daily:read 2>/dev/null | grep -v '^[[:space:]]*$' | tail -n 1)
+if [ -z "$placeholder" ]; then
     placeholder="Add to daily note:"
 fi
 
@@ -42,18 +25,10 @@ if [ -z "$mode" ]; then
     mode="new"
 fi
 
-# Ensure the directory exists
-mkdir -p "$CALENDAR_PATH"
-
 # Append based on mode
 if [ "$mode" = "new" ]; then
-    # New entry with timestamp
     TIME=$(date +%H:%M)
-    printf "\n- %s %s" "$TIME" "$input" >>"$FILE"
+    obsidian daily:append content="- $TIME $input" silent
 else
-    # Append entry with tab indentation, no timestamp
-    printf "\n\t- %s" "$input" >>"$FILE"
+    obsidian daily:append content="\t- $input" silent
 fi
-
-# Optional: Notify
-# notify-send "Obsidian Daily Note" "Appended: $TIME $TEXT"
