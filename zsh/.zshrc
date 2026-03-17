@@ -3,6 +3,12 @@ if [[ -o interactive ]]; then
     fastfetch
 fi
 
+# keychain: load SSH keys before p10k instant prompt (passphrase prompt must be early)
+# SSH_ASKPASS_REQUIRE=never forces terminal prompt even when DISPLAY is set
+export SSH_ASKPASS_REQUIRE=never
+zstyle :omz:plugins:keychain identities github-key
+zstyle :omz:plugins:keychain options --quiet
+
 # EnablE Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
