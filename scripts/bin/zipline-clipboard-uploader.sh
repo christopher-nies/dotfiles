@@ -6,10 +6,17 @@ TOKEN=$ZIPLINE_API_KEY  # Replace with your actual token
 URL=$ZIPLINE_API_URL  # Replace with your upload URL
 
 # Create a temporary file to store the clipboard image
-tmpfile=$(mktemp --suffix=.png)
+tmpfile=$(mktemp)
+
+# Detect exact image mime type from clipboard
+img_type=$(wl-paste --list-types | grep -m1 'image/')
+if [[ -z $img_type ]]; then
+    notify-send "Error" "No image in clipboard."
+    exit 1
+fi
 
 # Use wl-paste to grab the image from clipboard and save it to a temporary file
-wl-paste > "$tmpfile"
+wl-paste --type "$img_type" > "$tmpfile"
 
 # Check if the image was successfully saved
 if [[ ! -s $tmpfile ]]; then
@@ -19,15 +26,16 @@ fi
 
 # Upload the image using curl
 # HINT: 'x-zipline-image-compression-percent: 80, converts image to `jpeg`!
-uploaded_url=$(curl -H "authorization: $TOKEN" "$URL" \
-    -F "file=@$tmpfile;type=$(file --mime-type -b "$tmpfile")" \
+response=$(curl -s -H "authorization: $TOKEN" "$URL" \
+    -F "file=@$tmpfile;type=$img_type" \
     -H 'content-type: multipart/form-data' \
-    -H 'x-zipline-format: random' | \
-    jq -r .files[0].url)
+    -H 'x-zipline-format: random')
+
+uploaded_url=$(echo "$response" | jq -r '.files[0].url // empty')
 
 # Check if upload was successful
 if [[ -z $uploaded_url ]]; then
-    echo "Upload failed or no URL returned."
+    notify-send "Upload Failed" "Response: $response"
     exit 1
 fi
 
