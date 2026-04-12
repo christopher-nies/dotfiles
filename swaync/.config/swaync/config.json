@@ -17,7 +17,7 @@
     "fit-to-screen": false,
     "control-center-width": 500,
     "control-center-height": 1025,
-    "notification-window-width": 440,
+    "notification-window-width": 390,
     "keyboard-shortcuts": true,
     "image-visibility": "when-available",
     "transition-time": 200,
