@@ -18,7 +18,7 @@
 * {
     font-family: "JetBrainsMono NFP", monospace;
     font-weight: 500;
-    font-size: 13px;
+    font-size: 18px;
 }
 
 /* ── Notification windows (floating toasts) ──────── */
@@ -130,18 +130,23 @@ window.swaync-notification-window .window-frame {
 
 /* ── Text ────────────────────────────────────────── */
 .notification-row .notification-background .notification .notification-default-action .notification-content .text-box .summary {
-    font-size: 14px;
+    font-size: 19px;
     font-weight: 700;
     color: @fg;
 }
 
+.notification-row .notification-background .notification .notification-default-action .notification-content .text-box .app-name {
+    font-size: 13px;
+    color: @fg2;
+}
+
 .notification-row .notification-background .notification .notification-default-action .notification-content .text-box .time {
-    font-size: 11px;
+    font-size: 15px;
     color: @orange;
 }
 
 .notification-row .notification-background .notification .notification-default-action .notification-content .text-box .body {
-    font-size: 12px;
+    font-size: 17px;
     color: @fg1;
     line-height: 1.4;
 }
@@ -181,7 +186,7 @@ window.swaync-notification-window .window-frame {
     margin-right: 6px;
     min-width: 20px;
     min-height: 20px;
-    font-size: 10px;
+    font-size: 14px;
 }
 
 .close-button:hover {
