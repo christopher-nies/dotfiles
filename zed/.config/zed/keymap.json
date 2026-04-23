@@ -1,0 +1,38 @@
+// Custom vim keybindings — ported from ~/.dots/nvim/.config/nvim/lua/config/keymaps.lua
+[
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      // jk → Esc
+      "j k": "vim::NormalBefore"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == normal",
+    "bindings": {
+      // j/k → gj/gk (display-line aware movement for soft-wrapped lines)
+      "j": "editor::MoveDown",
+      "k": "editor::MoveUp",
+      // J/K → 5gj/5gk (fast vertical navigation)
+      "J": ["editor::MoveDownByLines", {"lines": 5}],
+      "K": ["editor::MoveUpByLines", {"lines": 5}],
+      // L/H → $, ^ (line end/first non-blank)
+      "L": "vim::EndOfLine",
+      "H": "vim::FirstNonWhitespace",
+      // <leader>j/k → original J/K (join lines, hover docs)
+      "space j": "vim::JoinLines",
+      "space k": "editor::Hover"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == visual",
+    "bindings": {
+      // J/K → 5gj/5gk (fast navigation in visual, extends selection)
+      "J": ["editor::SelectDownByLines", {"lines": 5}],
+      "K": ["editor::SelectUpByLines", {"lines": 5}],
+      // <leader>y/p → system clipboard yank/paste
+      "space y": "editor::Copy",
+      "space p": "editor::Paste"
+    }
+  }
+]

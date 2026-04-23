@@ -1,0 +1,84 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+	"project_panel": {
+  "dock": "left"
+ },
+ "outline_panel": {
+  "dock": "left"
+ },
+ "collaboration_panel": {
+  "dock": "left"
+ },
+ "agent": {
+  "dock": "right",
+  "favorite_models": [],
+  "model_parameters": []
+ },
+ "git_panel": {
+  "dock": "left",
+  "tree_view": true
+ },
+ "agent_servers": {
+		"claude-acp": {
+			"type": "registry",
+		},
+	},
+	"auto_update": false,
+	"telemetry": {
+		"diagnostics": false,
+		"metrics": false,
+	},
+	"agent_buffer_font_size": 20.0,
+	"session": {
+		"trust_all_worktrees": true,
+	},
+	"vim_mode": true,
+	"terminal": {
+		"font_size": 18.0,
+		"font_family": "CaskaydiaCove Nerd Font",
+		"cursor_shape": "block",
+		"blinking": "off",
+	},
+	"base_keymap": "VSCode",
+	"tabs": {
+		"activate_on_close": "left_neighbour",
+	},
+	"relative_line_numbers": "enabled",
+	"vertical_scroll_margin": 8.0,
+	"gutter": {
+		"line_numbers": true,
+	},
+	"cursor_shape": "block",
+	"cursor_blink": false,
+	"autosave": "on_focus_change",
+	"confirm_quit": true,
+	"buffer_font_family": "CaskaydiaCove Nerd Font",
+	"file_types": {
+		"latex": ["*.pdf_tex", "*.tikz"],
+		"c": ["*.keymap"],
+	},
+	"show_whitespaces": "all",
+	"preferred_line_length": 110,
+	"soft_wrap": "bounded",
+	"hard_tabs": true,
+	"tab_size": 4,
+	"icon_theme": {
+		"mode": "system",
+		"light": "Material Icon Theme",
+		"dark": "Material Icon Theme",
+	},
+	"ui_font_size": 22.0,
+	"buffer_font_size": 20.0,
+	"theme": {
+		"mode": "dark",
+		"light": "Gruvbox Light",
+		"dark": "Gruvbox Dark",
+	},
+}
