@@ -110,6 +110,7 @@ DEFAULT = ":default:"
 "AppFlowy" = ":appflowy:"
 "winboat" = ":windows_app:"
 "(?i)antigravity" = ":antigravity:"
+"(?i)orcaslicer" = ":orcaslicer:"
 
 # anki 
 # nextcloud 
