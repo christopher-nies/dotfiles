@@ -3,6 +3,11 @@ use = "yazi-rs/plugins:git"
 rev = "de53d90"
 hash = "63b6c222bf2103b3023389dde5e2ecfe"
 
+[[plugin.deps]]
+use = "ruudjhuu/f3d-preview"
+rev = "76d115d"
+hash = "6b2008327d65fe374d99f6b6ff007cba"
+
 [[flavor.deps]]
 use = "bennyyip/gruvbox-dark"
 rev = "91fdfa7"

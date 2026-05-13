@@ -46,3 +46,12 @@ previewers = [
 	{ url = "*", run = "file" },
 ]
 
+prepend_preloaders = [
+  # 3d objects
+  { url = "*.{3mf,obj,pts,ply,stl,step,stp}", run="f3d-preview"},
+]
+
+prepend_previewers = [
+  # 3d objects
+  { url = "*.{3mf,obj,pts,ply,stl,step,stp}", run="f3d-preview"},
+]
