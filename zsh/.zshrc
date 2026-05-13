@@ -260,5 +260,9 @@ export NVM_DIR="$HOME/.nvm"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
+
+# Added by PAI installer — make bun reachable for hook subprocesses
+export PATH="$HOME/.bun/bin:$PATH"
+
 # PAI alias
-alias pai='bun /home/chris/.claude/PAI/Tools/pai.ts'
+alias pai='bun /home/chris/.claude/PAI/TOOLS/pai.ts'
