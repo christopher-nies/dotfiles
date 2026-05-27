@@ -1,9 +1,0 @@
-{
-  "env": {},
-  "enabledPlugins": {
-    "example-skills@anthropic-agent-skills": true,
-    "obsidian@obsidian-skills": false
-  },
-  "syntaxHighlightingDisabled": false,
-  "model": "sonnet"
-}
