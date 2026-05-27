@@ -1,7 +1,4 @@
 return {
-  -- LazyVim's markdown extra: render-markdown.nvim + markdown-preview.nvim + marksman LSP
-  { import = "lazyvim.plugins.extras.lang.markdown" },
-
   -- Obsidian-optimized render-markdown overrides (LazyVim disables checkboxes and icons by default)
   {
     "MeanderingProgrammer/render-markdown.nvim",
@@ -84,6 +81,18 @@ return {
       { "<leader>ml", "<cmd>ObsidianLinks<cr>", desc = "Links in note" },
       { "<leader>mt", "<cmd>ObsidianTags<cr>", desc = "Tags" },
       { "<leader>md", "<cmd>ObsidianDailies<cr>", desc = "Daily notes" },
+    },
+  },
+
+  -- Pass explicit config to markdownlint-cli2 (stdin mode skips filesystem discovery)
+  {
+    "mfussenegger/nvim-lint",
+    opts = {
+      linters = {
+        ["markdownlint-cli2"] = {
+          args = { "--config", vim.fn.expand("~/.markdownlint.json"), "-" },
+        },
+      },
     },
   },
 
