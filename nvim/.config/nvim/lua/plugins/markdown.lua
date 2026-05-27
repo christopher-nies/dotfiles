@@ -96,12 +96,27 @@ return {
     },
   },
 
-  -- Wire obsidian completion into blink.cmp
+  -- blink.compat bridges nvim-cmp-style sources (obsidian's cmp_obsidian*.lua) into blink.cmp
+  {
+    "saghen/blink.compat",
+    version = "*",
+    lazy = true,
+    opts = {},
+  },
+
+  -- Wire obsidian completion into blink.cmp via blink.compat (markdown only)
   {
     "saghen/blink.cmp",
     opts = {
       sources = {
-        default = { "lsp", "path", "snippets", "buffer", "obsidian", "obsidian_new", "obsidian_tags" },
+        per_filetype = {
+          markdown = { "lsp", "path", "snippets", "buffer", "obsidian", "obsidian_new", "obsidian_tags" },
+        },
+        providers = {
+          obsidian = { name = "obsidian", module = "blink.compat.source" },
+          obsidian_new = { name = "obsidian_new", module = "blink.compat.source" },
+          obsidian_tags = { name = "obsidian_tags", module = "blink.compat.source" },
+        },
       },
     },
   },
