@@ -1,117 +1,84 @@
-version = "1.1.15"
+version = "1.2.0"
+
+[class]
+"(?i)spotify" = ":spotify:"
+Code = ":code:"
+obsidian = ":obsidian:"
+Zotero = ":zotero:"
+libreoffice-impress = ":microsoft_power_point:"
+"Docker Desktop" = ":docker:"
+AppFlowy = ":appflowy:"
+"(?i)orcaslicer" = ":orcaslicer:"
+anki = ":anki:"
+evince = ":pdf:"
+DEFAULT = ":default:"
+"Gimp-2.10" = ":default:"
+"com.obsproject.Studio" = ":obsstudio:"
+libreoffice-calc = ":microsoft_excel:"
+Claude = ":claude:"
+rnote = ":freeform:"
+"org.inkscape.Inkscape" = ":inkscape:"
+blender = ":blender:"
+Chromium = ":google_chrome:"
+"(?i)kitty" = ":terminal:"
+xdg-desktop-portal-gtk = ":finder:"
+"com.github.xournalpp.xournalpp" = ":xournal:"
+"dev.zed.Zed" = ":zed:"
+qalculate-gtk = ":calculator:"
+code = ":code:"
+"(?i)antigravity" = ":antigravity:"
+firefox = ":firefox:"
+zathura = ":pdf_old:"
+ferdium = ":ferdium:"
+discord = ":discord:"
+winboat = ":windows_app:"
+chromium = ":google_chrome:"
+vlc = ":vlc:"
+thunar = ":finder:"
+Thunar = ":finder:"
+thunderbird = ":thunderbird:"
+"org.kde.okular" = ":pdf_old:"
+brave-browser = ":brave_browser:"
+libreoffice-writer = ":microsoft_word:"
+
+[class_active]
+
+[initial_class]
+
+[initial_class_active]
+
+[workspaces_name]
+
+[title_in_class."(?i)brave"]
+"(?i)bitwarden" = ":bit_warden:"
+
+[title_in_class."(?i)chrome"]
+
+[title_in_class_active]
+
+[title_in_initial_class]
+
+[title_in_initial_class_active]
+
+[initial_title_in_class]
+
+[initial_title_in_class_active]
+
+[initial_title_in_initial_class]
+
+[initial_title_in_initial_class_active]
+
+[exclude]
 
 [format]
 dedup = true
 dedup_inactive_fullscreen = false
 delim = " "
-client = "{icon}{delim}"
-client_dup_fullscreen = "[{icon}]{delim}{icon}{counter_unfocused_sup}"
-client_fullscreen = "[{icon}]{delim}"
-client_active = "{icon}"
 workspace = "<span font_family='Roboto' size='14pt'>{id}:</span>{delim}{clients}"
 workspace_empty = "<span font_family='Roboto' size='14pt'>{id}</span>{delim}{clients}"
-# workspace = "<span color='red'{id}:</span>{delim}{clients}"
-# workspace = "<b><span color='red'>{id}-{name}:</span></b>{delim}{clients}"
-# client_active = "<span color="red">{icon}</span>{delim}"
-# client_dup = "{icon}{counter_sup}{delim}"
-
-# [class_active]
-# DEFAULT="{icon}"
-
-# [initial_class]
-# "DEFAULT" = " {class}: {title}"
-# "(?i)Kitty" = "term"
-
-# [initial_class_active]
-# "(?i)Kitty" = "*TERM*"
-
-# regex captures support is supported
-# [title_in_class."(?i)foot"]
-# "emerge: (.+?/.+?)-.*" = "{match1}"
-
-# [initial_title_in_class."kitty"]
-# "zsh" = "Zsh"
-
-# [title_in_class."(firefox|chrom.*)"]
-# "(?i)youtube" = "ꟳ"
-# "(?i)twitch" = "ꟳ"
-
-# [title_active."(firefox|chrom.*)"]
-# "(?i)twitch" = "<span color='purple'>{icon}</span>"
-
-# [title_in_initial_class."(?i)kitty"]
-# "(?i)neomutt" = "neomutt"
-
-# [initial_title_in_initial_class."(?i)kitty"]
-# "(?i)neomutt" = "neomutt"
-
-# [initial_title."(?i)kitty"]
-# "zsh" = "Zsh"
-
-# [initial_title_active."(?i)kitty"]
-# "zsh" = "*Zsh*"
-
-[title_in_class."(?i)brave"]
-# intended for PWAs
-#"Open WebUI" = ":openai:"
-"(?i)bitwarden" = ":bit_warden:"
-#"Home Assistant" = ":home_assistant:"
-#"Todoist" = ":todoist:"
-#"Outlook" = ":microsoft_outlook:"
-#"Webex" = ":webex:"
-#"Readeck" = ":readeck:"
-#"Linkwarden" = ":linkwarden:"
-#"WhatsApp Web" = ":whats_app:"
-#"ResearchRabbit" = ":researchrabbit:"
-
-[title_in_class."(?i)chrome"]
-# intended for PWAs
-#"Calendar" = ":calendar:"
-#"NotebookLM" = ":notebooklm:"
-#"Claude" = ":claude:"
-
-
-[class]
-DEFAULT = ":default:"
-"anki" = ":anki:"
-"Gimp-2.10" = ":default:"
-"(?i)kitty" = ":terminal:"
-"brave-browser" = ":brave_browser:"
-"code" = ":code:"
-"Code" = ":code:"
-"obsidian" = ":obsidian:"
-"firefox" = ":firefox:"
-"Zotero" = ":zotero:"
-"dev.zed.Zed" = ":zed:"
-"zathura" = ":pdf_old:"
-"org.kde.okular" = ":pdf_old:"
-"evince" = ":pdf:"
-"Thunar" = ":finder:"
-"thunar" = ":finder:"
-"thunderbird" = ":thunderbird:"
-"libreoffice-writer" = ":microsoft_word:"
-"libreoffice-calc" = ":microsoft_excel:"
-"libreoffice-impress" = ":microsoft_power_point:"
-"discord" = ":discord:"
-"blender" = ":blender:"
-"org.inkscape.Inkscape" = ":inkscape:"
-"(?i)spotify" = ":spotify:"
-"vlc" = ":vlc:"
-"chromium" = ":google_chrome:"
-"Chromium" = ":google_chrome:"
-"rnote" = ":freeform:"
-"ferdium" = ":ferdium:"
-"qalculate-gtk" = ":calculator:"
-"com.github.xournalpp.xournalpp" = ":xournal:"
-"com.obsproject.Studio" = ":obsstudio:"
-"xdg-desktop-portal-gtk" = ":finder:"
-"Docker Desktop" = ":docker:"
-"Claude" = ":claude:"
-"AppFlowy" = ":appflowy:"
-"winboat" = ":windows_app:"
-"(?i)antigravity" = ":antigravity:"
-"(?i)orcaslicer" = ":orcaslicer:"
-
-# anki 
-# nextcloud 
-
+client = "{icon}{delim}"
+client_fullscreen = "[{icon}]{delim}"
+client_active = "{icon}"
+client_dup = "{icon}{counter_sup}"
+client_dup_active = "*{icon}*{delim}{icon}{counter_unfocused_sup}"
+client_dup_fullscreen = "[{icon}]{delim}{icon}{counter_unfocused_sup}"
