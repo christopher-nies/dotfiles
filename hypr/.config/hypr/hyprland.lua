@@ -197,7 +197,7 @@ hl.device({
 ---------------------
 
 local mainMod = "SUPER"
-local Mod     = "ALT_L"
+local Mod     = "ALT"
 
 -- Rofi cheat-sheet
 hl.bind(mainMod .. " + A",                hl.dsp.exec_cmd(hyprDir .. "/scripts/rofi_keybinds.sh"))
