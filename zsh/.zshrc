@@ -272,3 +272,9 @@ export PATH="$HOME/.bun/bin:$PATH"
 
 # PAI alias
 alias pai='bun /home/chris/.claude/PAI/TOOLS/pai.ts'
+
+# bat — syntax-highlighted pager and cat/man replacement
+alias cat='bat'
+alias man='batman'
+export PAGER='bat'
+
