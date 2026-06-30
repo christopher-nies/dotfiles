@@ -41,6 +41,7 @@
     "*.tikz": "latex",
     "*.keymap": "c",
   },
+  "breadcrumbs.symbolSortOrder": "name",
   "security.workspace.trust.enabled": false,
   "update.mode": "none",
   "extensions.ignoreRecommendations": true,
