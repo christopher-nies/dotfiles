@@ -1,7 +1,35 @@
-[mgr]
-prepend_keymap = [
-	{ on = "J", run = "arrow 5", desc = "Next 5 files" },
-	{ on = "K", run = "arrow -5", desc = "Prev 5 files" },
-	{ on = "<C-j>", run = "seek 5", desc = "Next 5 lines in preview pane" },
-	{ on = "<C-k>", run = "seek -5", desc = "Prev 5 lines in preview pane" },
-]
+# Copy yanked files to the system clipboard
+[[mgr.prepend_keymap]]
+on  = "y"
+run = [ "yank", 'plugin clipboard -- --action=copy' ]
+desc = "Copy yanked files to system clipboard"
+
+# Paste files from the system clipboard into the current directory
+[[mgr.prepend_keymap]]
+on  = "<C-p>"
+run = [ 'plugin clipboard -- --action=paste' ]
+desc = "Paste files from system clipboard"
+
+# Next 5 files
+[[mgr.prepend_keymap]]
+on   = "J"
+run  = "arrow 5"
+desc = "Next 5 files"
+
+# Prev 5 files
+[[mgr.prepend_keymap]]
+on   = "K"
+run  = "arrow -5"
+desc = "Prev 5 files"
+
+# Next 5 lines in preview pane
+[[mgr.prepend_keymap]]
+on   = "<C-j>"
+run  = "seek 5"
+desc = "Next 5 lines in preview pane"
+
+# Prev 5 lines in preview pane
+[[mgr.prepend_keymap]]
+on   = "<C-k>"
+run  = "seek -5"
+desc = "Prev 5 lines in preview pane"

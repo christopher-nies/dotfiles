@@ -8,6 +8,11 @@ use = "ruudjhuu/f3d-preview"
 rev = "76d115d"
 hash = "6b2008327d65fe374d99f6b6ff007cba"
 
+[[plugin.deps]]
+use = "XYenon/clipboard"
+rev = "0ac0320"
+hash = "f80172438b4b5c31e94d6c891f734445"
+
 [[flavor.deps]]
 use = "bennyyip/gruvbox-dark"
 rev = "619fdc5"
