@@ -273,6 +273,9 @@ export PATH="$HOME/.bun/bin:$PATH"
 # PAI alias
 alias pai='bun /home/chris/.claude/PAI/TOOLS/pai.ts'
 
+# LifeOS launch command (added by LifeOS setup 2026-07-14)
+alias lifeos='bun /home/chris/.claude/LIFEOS/TOOLS/lifeos.ts -s /home/chris/.claude/LIFEOS/LIFEOS_SYSTEM_PROMPT.md'
+
 # bat — syntax-highlighted pager and cat/man replacement
 alias cat='bat'
 alias man='batman'
