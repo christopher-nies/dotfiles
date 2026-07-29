@@ -5,9 +5,11 @@ fi
 
 # keychain: load SSH keys before p10k instant prompt (passphrase prompt must be early)
 # SSH_ASKPASS_REQUIRE=never forces terminal prompt even when DISPLAY is set
+# Direct call rather than the omz keychain plugin: the plugin's body runs at
+# `source $ZSH/oh-my-zsh.sh` further down, i.e. AFTER instant prompt, and its
+# version detection breaks on keychain 3.x (see ohmyzsh PR #13898).
 export SSH_ASKPASS_REQUIRE=never
-zstyle :omz:plugins:keychain identities github-key
-zstyle :omz:plugins:keychain options --quiet
+eval "$(keychain add --eval --quiet github-key)"
 
 # EnablE Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -107,7 +109,6 @@ plugins=(git
     zsh-autosuggestions
     zsh-syntax-highlighting
     vi-mode
-    keychain
 )
 
 # **bindkeys** are at the end of the file!
