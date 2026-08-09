@@ -195,9 +195,9 @@ yt() {
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # pacman
-alias pacman="sudo pacman --color auto"
-alias update="sudo pacman -Syyu"
-alias upd="sudo pacman -Syyu"
+alias pacman="pacman --color auto"
+alias update="sudo pacman -Syyu --color auto"
+alias upd="sudo pacman -Syyu --color auto"
 
 # paru
 alias upall="paru -Syyu"
