@@ -3,7 +3,7 @@ version = "1.2.0"
 [class]
 "(?i)spotify" = ":spotify:"
 Code = ":code:"
-"md.Obsidian" = ":obsidian:"
+"md.obsidian.Obsidian" = ":obsidian:"
 Zotero = ":zotero:"
 libreoffice-impress = ":microsoft_power_point:"
 "Docker Desktop" = ":docker:"
