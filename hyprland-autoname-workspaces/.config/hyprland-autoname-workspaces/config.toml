@@ -40,6 +40,7 @@ thunderbird = ":thunderbird:"
 "org.kde.okular" = ":pdf_old:"
 brave-browser = ":brave_browser:"
 libreoffice-writer = ":microsoft_word:"
+helium = ":helium:"
 
 [class_active]
 
@@ -52,7 +53,13 @@ libreoffice-writer = ":microsoft_word:"
 [title_in_class."(?i)brave"]
 "(?i)bitwarden" = ":bit_warden:"
 
+# Chromium-derived popup windows (Helium, Chrome, Chromium) get class
+# "chrome-<extension-id>-Default" for extension app windows.
 [title_in_class."(?i)chrome"]
+"(?i)bitwarden" = ":bit_warden:"
+
+[title_in_class."(?i)helium"]
+"(?i)bitwarden" = ":bit_warden:"
 
 [title_in_class_active]
 
