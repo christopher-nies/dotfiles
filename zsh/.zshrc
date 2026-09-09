@@ -33,6 +33,14 @@ function y() {
 	rm -f -- "$tmp"
 }
 
+function cheat() {
+    curl "cheat.sh/$*"
+}
+
+function cht() {
+    curl "cheat.sh/$*"
+}
+
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
