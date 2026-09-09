@@ -40,6 +40,7 @@
 		"metrics": false,
 	},
 	"agent_buffer_font_size": 20.0,
+	"git_commit_buffer_font_size": 20.0,
 	"session": {
 		"trust_all_worktrees": true,
 	},
@@ -78,8 +79,8 @@
 		"light": "Material Icon Theme",
 		"dark": "Material Icon Theme",
 	},
-	"ui_font_size": 22.0,
-	"buffer_font_size": 20.0,
+	"ui_font_size": 24.0,
+	"buffer_font_size": 22.0,
 	"theme": {
 		"mode": "dark",
 		"light": "Gruvbox Light",
