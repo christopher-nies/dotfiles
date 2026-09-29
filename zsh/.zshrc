@@ -306,3 +306,6 @@ else
 fi
 unset __mamba_setup
 # <<< mamba initialize <<<
+
+# opencode
+export PATH=/home/chris/.opencode/bin:$PATH
