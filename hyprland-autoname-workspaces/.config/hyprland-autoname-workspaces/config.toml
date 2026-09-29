@@ -41,6 +41,7 @@ thunderbird = ":thunderbird:"
 brave-browser = ":brave_browser:"
 libreoffice-writer = ":microsoft_word:"
 helium = ":helium:"
+"(?i)hermes" = ":hermes_agent:"
 
 [class_active]
 
