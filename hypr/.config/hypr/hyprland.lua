@@ -1,5 +1,6 @@
--- hyprland.lua — migrated from hyprland.conf for Hyprland 0.55+
--- Old hyprland.conf is kept as backup; this file takes precedence.
+-- hyprland.lua — the only config Hyprland 0.57+ reads (hyprlang support was removed).
+-- hyprland.conf is kept for reference only; it is no longer loaded.
+-- Check after editing: Hyprland --verify-config -c ~/.config/hypr/hyprland.lua
 
 require("monitors")
 require("workspaces")
@@ -35,7 +36,8 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("hypridle")
 	hl.exec_cmd("waybar")
 	hl.exec_cmd("swaync")
-	hl.exec_cmd("hyprland-autoname-workspaces")
+	-- absolute path: Hyprland's PATH lacks ~/.local/bin, and a stale pre-Lua copy sits in /usr/bin
+	hl.exec_cmd(home .. "/.local/bin/hyprland-autoname-workspaces")
 	hl.exec_cmd("wlsunset -l 51.2 -L 8.1")
 	hl.exec_cmd("ydotoold")
 	hl.exec_cmd("nextcloud")
@@ -70,6 +72,16 @@ hl.env("QT_SCALE_FACTOR", "1")
 hl.env("QT_AUTO_SCREEN_SCALE_FACTOR", "0")
 hl.env("SDL_VIDEODRIVER", "wayland")
 hl.env("CLUTTER_BACKEND", "wayland")
+
+-- Workaround for the 0.57.0 regression on older Intel iGPUs: the new default
+-- (true) advertises only no-alpha dmabuf formats, so kitty and other EGL apps
+-- fail with "No EGLConfigs returned". Fixed upstream in hyprwm/Hyprland#16731
+-- (merged 2026-10-31); remove this block once a release containing it lands.
+hl.config({
+	quirks = {
+		skip_non_kms_dmabuf_formats = false,
+	},
+})
 
 -----------------------
 ---- LOOK AND FEEL ----
@@ -220,7 +232,7 @@ hl.bind(mainMod .. " + SHIFT + X", hl.dsp.exec_cmd("archlinux-logout"))
 hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen())
-hl.bind(mainMod .. " + E", hl.dsp.layout("rotatesplit"))
+hl.bind(mainMod .. " + E", hl.dsp.layout("swapwithmaster"))
 hl.bind(mainMod .. " + Tab", hl.dsp.window.cycle_next())
 
 -- Waybar
@@ -246,6 +258,10 @@ for i = 1, 10 do
 	hl.bind(mainMod .. " + " .. key, hl.dsp.focus({ workspace = i }))
 	hl.bind(mainMod .. " + SHIFT + " .. key, hl.dsp.window.move({ workspace = i }))
 end
+
+-- Workspace 11 (second monitor)
+hl.bind(mainMod .. " + grave", hl.dsp.focus({ workspace = 11 }))
+hl.bind(mainMod .. " + SHIFT + grave", hl.dsp.window.move({ workspace = 11 }))
 
 -- Special workspaces
 hl.bind(mainMod .. " + X", hl.dsp.workspace.toggle_special("ferdium"))
@@ -317,24 +333,33 @@ hl.workspace_rule({
 	on_created_empty = "gromit-mpx -a",
 })
 
+-- Rule regexes must match the WHOLE class/title (verified on 0.57): "^", "$" and "( )" add
+-- nothing, "^(vlc)" means exactly "vlc", and a substring like "obsidian" never matches.
+-- Write ".*" where a prefix is meant, and "(?i)" for case-insensitive.
+
 -- Special workspace assignments
-hl.window_rule({ match = { class = "^([S|s]potify)" }, workspace = "special:spotify" })
-hl.window_rule({ match = { class = "^([F|f]erdium)" }, workspace = "special:ferdium" })
+hl.window_rule({ match = { class = "^([Ss]potify)" }, workspace = "special:spotify" })
+hl.window_rule({ match = { class = "^([Ff]erdium)" }, workspace = "special:ferdium" })
 
 -- Float rules
 hl.window_rule({ match = { title = "^(ranger)$" }, float = true })
+hl.window_rule({ match = { class = "^(org.pwmt.zathura)$" }, float = true })
 hl.window_rule({ match = { title = "^(satty)$" }, float = true })
 hl.window_rule({ match = { class = "^(Leafpad)$" }, float = true, center = true })
-hl.window_rule({ match = { class = "^(brave)$" }, float = true })
 hl.window_rule({ match = { title = "^(DevTools)$" }, float = true })
 hl.window_rule({ match = { class = "com.nextcloud.desktopclient.nextcloud" }, float = true })
-hl.window_rule({ match = { class = "obsidian" }, focus_on_activate = true })
+hl.window_rule({ match = { class = [[md\.obsidian\.Obsidian]] }, focus_on_activate = true })
 
 -- Workspace assignments
 hl.window_rule({ match = { class = "^(brave-browser)$" }, workspace = "1" })
+hl.window_rule({ match = { class = "^(helium)$" }, workspace = "1" })
 hl.window_rule({ match = { class = "^(kitty)$" }, workspace = "2" })
 hl.window_rule({ match = { class = "^(code)$" }, workspace = "6" })
-hl.window_rule({ match = { class = "^(obsidian)$" }, workspace = "10" })
+-- main window only: the Settings popout should open where Obsidian is, not jump to 10
+hl.window_rule({
+	match = { class = [[md\.obsidian\.Obsidian]], title = [[negative:[Ss]ettings( - .*)?]] },
+	workspace = "10",
+})
 hl.window_rule({ match = { title = "^(Chat)$" }, workspace = "4" })
 hl.window_rule({ match = { title = "^(Claude)$" }, workspace = "4" })
 hl.window_rule({ match = { title = "^(NotebookLM)$" }, workspace = "4" })
@@ -346,8 +371,10 @@ hl.window_rule({ match = { title = "^(Todoist)$" }, float = true, size = "1200 8
 -- Misc float rules
 hl.window_rule({ match = { title = "^(LaTeX OCR)$" }, float = true })
 hl.window_rule({ match = { title = "^(Open Folder)$" }, float = true })
-hl.window_rule({ match = { title = "^(bluetooth)$" }, float = true })
-hl.window_rule({ match = { class = "^(brave-nngceckbapebfimnlniiiahkandclblb-Default)" }, float = true, center = true })
+hl.window_rule({ match = { title = "(?i)bluetooth" }, float = true })
+-- Bitwarden popup (Brave and Chromium-based builds)
+hl.window_rule({ match = { class = "^(brave-nngceckbapebfimnlniiiahkandclblb-Default)" }, float = true })
+hl.window_rule({ match = { class = "^(chrome-nngceckbapebfimnlniiiahkandclblb-Default)" }, float = true })
 hl.window_rule({ match = { class = "^(org.ksnip.ksnip)" }, float = true })
 hl.window_rule({ match = { class = "^(qalculate-gtk)" }, float = true })
 hl.window_rule({ match = { class = "^(handy)$" }, float = true })
@@ -358,14 +385,20 @@ hl.window_rule({
 	match = { class = "Zotero", title = "^(Plugins Manager)" },
 	float = true,
 })
-hl.window_rule({ match = { class = "^(t|T)hunar" }, float = true })
+hl.window_rule({ match = { class = "[Tt]hunar" }, float = true })
 hl.window_rule({ match = { class = "^(vlc)" }, float = true })
 hl.window_rule({ match = { class = "^(feh)" }, float = true, center = true })
 hl.window_rule({ match = { class = "^(xdg-desktop-portal-gtk)" }, float = true })
 hl.window_rule({ match = { class = "^(Matplotlib)" }, float = true, center = true })
 hl.window_rule({ match = { title = "^(Zotero Settings)" }, float = true })
 hl.window_rule({ match = { class = "^(Zotero)$" }, confine_pointer = true })
-hl.window_rule({ match = { title = "^(Bluetooth)" }, float = true })
+-- Obsidian 1.15 opens Settings as its own window ("Settings - <vault> - Obsidian <ver>").
+-- Rule regexes must match the WHOLE string, so the title pattern has to cover the suffix.
+hl.window_rule({
+	name = "obsidian-settings",
+	match = { class = [[^md\.obsidian\.Obsidian$]], title = [[^[Ss]ettings( - .*)?$]] },
+	float = true,
+})
 
 -- Suppress maximize requests from all apps
 hl.window_rule({
