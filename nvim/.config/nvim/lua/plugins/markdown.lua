@@ -2,10 +2,34 @@ return {
   -- Obsidian-optimized render-markdown overrides (LazyVim disables checkboxes and icons by default)
   {
     "MeanderingProgrammer/render-markdown.nvim",
+    init = function()
+      -- Heading colours match the Obsidian vault (AnuPpuccin, ctp-gruvbox-dark):
+      -- H1 red, H2 yellow, H3 green, H4 teal, H5 lavender, H6 mauve.
+      local colors = { "#cc241d", "#d79921", "#98971a", "#66981a", "#926faf", "#b16286" }
+      local function apply()
+        for level, fg in ipairs(colors) do
+          vim.api.nvim_set_hl(0, "@markup.heading." .. level .. ".markdown", { fg = fg, bold = true })
+          vim.api.nvim_set_hl(0, "RenderMarkdownH" .. level, { fg = fg, bold = true })
+        end
+      end
+      apply()
+      -- Colorschemes reset highlights on load, so re-apply after every :colorscheme.
+      vim.api.nvim_create_autocmd("ColorScheme", {
+        group = vim.api.nvim_create_augroup("markdown_heading_colors", { clear = true }),
+        callback = apply,
+      })
+    end,
     opts = {
       heading = {
         sign = false,
-        icons = { "󰲡 ", "󰲣 ", "󰲥 ", "󰲧 ", "󰲩 ", "󰲫 " },
+        -- Keep the plain '#' markers; the colour carries the depth.
+        icons = { "# ", "## ", "### ", "#### ", "##### ", "###### " },
+        -- No full-line colour bars. All six entries are needed: the plugin
+        -- deep-merges lists by index, so a shorter list keeps the default bars.
+        backgrounds = {
+          "MdHeadingNoBg", "MdHeadingNoBg", "MdHeadingNoBg",
+          "MdHeadingNoBg", "MdHeadingNoBg", "MdHeadingNoBg",
+        },
       },
       code = {
         sign = false,
