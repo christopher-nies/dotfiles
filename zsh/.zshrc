@@ -13,7 +13,7 @@ export SSH_ASKPASS_REQUIRE=never
 # reboots, and keychain's liveness probe (pidfile PID alive + socket file exists)
 # is fooled when the old agent PID gets reused, so it exports a dead socket and
 # ssh-add dies with "Connection refused" (rc 2). tmpfs is wiped at boot.
-eval "$(keychain --absolute --dir "${XDG_RUNTIME_DIR:-/run/user/$UID}/keychain" add --eval --quiet github-key)"
+eval "$(keychain --absolute --dir "${XDG_RUNTIME_DIR:-/run/user/$UID}/keychain" add --eval --quiet id_ed25519)"
 
 # EnablE Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
