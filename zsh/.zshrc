@@ -129,7 +129,7 @@ source $ZSH/oh-my-zsh.sh
 
 # fzf 
 source <(fzf --zsh)
-export FZF_DEFAULT_COMMAND="ag --hidden --ignore .git -l -g"
+export FZF_DEFAULT_COMMAND="ag --hidden --ignore .git -l -g ''"
 export FZF_DEFAULT_OPTS="--layout=reverse --border=rounded --margin=3% --color=dark"
 
 
