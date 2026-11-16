@@ -20,7 +20,8 @@ run = [ 'shell -- for path in %s; do echo "file://$path"; done | wl-copy -t text
 
 [preview]
 wrap = "yes"
-max_width = 1000
+max_width = 3000
+max_height = 3000
 image_quality = 50
 
 [plugin]
