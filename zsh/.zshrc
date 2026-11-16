@@ -132,6 +132,17 @@ source <(fzf --zsh)
 export FZF_DEFAULT_COMMAND="ag --hidden --ignore .git -l -g ''"
 export FZF_DEFAULT_OPTS="--layout=reverse --border=rounded --margin=3% --color=dark"
 
+# fif: find in files. Fuzzy search across file names AND contents (rg | fzf),
+# preview with bat, Enter opens the line in VS Code. Usage: fif [dir]
+# Recipe: fzf ADVANCED.md, "Using fzf as the secondary filter".
+fif() {
+  rg --line-number --no-heading --color=always --smart-case '\S' "${1:-.}" |
+    fzf --ansi --delimiter : \
+        --preview 'bat --color=always {1} --highlight-line {2}' \
+        --preview-window 'right,60%,+{2}+3/3' \
+        --bind 'enter:become(code -g {1}:{2})'
+}
+
 
 # User configuration
 
