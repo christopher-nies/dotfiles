@@ -3,7 +3,7 @@ if [[ -o interactive ]]; then
     fastfetch
 fi
 
-# keychain: load SSH keys before p10k instant prompt (passphrase prompt must be early)
+# keychain: load SSH keys early (the passphrase prompt must come before anything else)
 # SSH_ASKPASS_REQUIRE=never forces terminal prompt even when DISPLAY is set
 # Direct call rather than the omz keychain plugin: the plugin's body runs at
 # `source $ZSH/oh-my-zsh.sh` further down, i.e. AFTER instant prompt, and its
@@ -15,12 +15,6 @@ export SSH_ASKPASS_REQUIRE=never
 # ssh-add dies with "Connection refused" (rc 2). tmpfs is wiped at boot.
 eval "$(keychain --absolute --dir "${XDG_RUNTIME_DIR:-/run/user/$UID}/keychain" add --eval --quiet id_ed25519)"
 
-# EnablE Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
 eval "$(zoxide init zsh)"
 
 # yazi
@@ -258,8 +252,6 @@ alias mirrorxx="sudo reflector --age 6 --latest 20  --fastest 20 --threads 20 --
 alias ram='rate-mirrors --allow-root --disable-comments arch | sudo tee /etc/pacman.d/mirrorlist'
 alias rams='rate-mirrors --allow-root --disable-comments --protocol https arch  | sudo tee /etc/pacman.d/mirrorlist'
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # autosuggestions keybinding
 bindkey ';' autosuggest-accept
