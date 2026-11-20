@@ -51,7 +51,8 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="powerlevel10k/powerlevel10k"
+# Empty: the prompt is starship (initialised at the end of this file).
+ZSH_THEME=""
 
 # set neovim to editor
 export EDITOR=/usr/bin/nvim
@@ -306,3 +307,7 @@ alias mm="micromamba"
 
 # opencode
 export PATH=/home/chris/.opencode/bin:$PATH
+
+# starship prompt (config: ~/.config/starship.toml, stowed from ~/.dots/starship).
+# Last, so it wraps the vi-mode keymap widget and the mamba hook already defined.
+eval "$(starship init zsh)"
