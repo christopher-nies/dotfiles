@@ -266,7 +266,6 @@ hl.bind(mainMod .. " + SHIFT + grave", hl.dsp.window.move({ workspace = 11 }))
 -- Special workspaces
 hl.bind(mainMod .. " + X", hl.dsp.workspace.toggle_special("ferdium"))
 hl.bind(mainMod .. " + S", hl.dsp.workspace.toggle_special("spotify"))
-hl.bind("SUPER + ALT + G", hl.dsp.workspace.toggle_special("gromit"))
 
 -- Mouse workspace scroll
 hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
@@ -324,14 +323,6 @@ hl.bind("switch:Lid Switch", hl.dsp.exec_cmd("hyprlock"), { locked = true })
 --------------------------------
 ---- WINDOWS AND WORKSPACES ----
 --------------------------------
-
--- Gromit-mpx special workspace
-hl.workspace_rule({
-	workspace = "special:gromit",
-	gaps_in = 0,
-	gaps_out = 0,
-	on_created_empty = "gromit-mpx -a",
-})
 
 -- Rule regexes must match the WHOLE class/title (verified on 0.57): "^", "$" and "( )" add
 -- nothing, "^(vlc)" means exactly "vlc", and a substring like "obsidian" never matches.
@@ -405,15 +396,6 @@ hl.window_rule({
 	name = "suppress-maximize",
 	match = { class = ".*" },
 	suppress_event = "maximize",
-})
-
--- Gromit-mpx (screen annotation overlay)
-hl.window_rule({
-	match = { class = "^(Gromit-mpx)$" },
-	no_blur = true,
-	opacity = 1.0,
-	no_shadow = true,
-	size = "100% 100%",
 })
 
 -- Layer rules
