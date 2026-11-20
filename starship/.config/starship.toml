@@ -1,26 +1,26 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 format = """
-[](color_orange)\
+[](fg:color_bg2)\
 $os\
 $username\
 $hostname\
-[](bg:color_yellow fg:color_orange)\
+[](fg:color_bg2 bg:color_bg1)\
 $directory\
-[](fg:color_yellow bg:color_aqua)\
+[](fg:color_bg1 bg:color_bg2)\
 $git_branch\
 $git_status\
-[](fg:color_aqua bg:color_blue)\
+[](fg:color_bg2 bg:color_bg1)\
 $c\
 $cpp\
 $rust\
 $nodejs\
 $bun\
 $python\
-[](fg:color_blue bg:color_bg3)\
+[](fg:color_bg1 bg:color_bg2)\
 $docker_context\
 $conda\
-[](fg:color_bg3 bg:color_bg1)\
+[](fg:color_bg2 bg:color_bg1)\
 $cmd_duration\
 $time\
 [ ](fg:color_bg1)\
@@ -29,21 +29,22 @@ $line_break$character"""
 palette = 'gruvbox_dark'
 
 [palettes.gruvbox_dark]
-color_fg0 = '#fbf1c7'
+color_fg0 = '#ebdbb2'
+color_gray = '#a89984'
 color_bg0 = '#282828'
 color_bg1 = '#3c3836'
-color_bg3 = '#665c54'
+color_bg2 = '#504945'
 color_blue = '#83a598'
 color_aqua = '#8ec07c'
-color_green = '#98971a'
+color_green = '#b8bb26'
 color_orange = '#fe8019'
-color_purple = '#b16286'
-color_red = '#cc241d'
+color_purple = '#d3869b'
+color_red = '#fb4934'
 color_yellow = '#fabd2f'
 
 [os]
 disabled = false
-style = "bg:color_orange fg:color_bg0"
+style = "bg:color_bg2 fg:color_orange"
 format = "[ $symbol ]($style)"
 
 [os.symbols]
@@ -71,12 +72,12 @@ RedHatEnterprise = "󱄛"
 Pop = ""
 
 [username]
-style_user = "bg:color_orange fg:color_bg0"
-style_root = "bg:color_orange fg:color_red"
+style_user = "bg:color_bg2 fg:color_orange"
+style_root = "bg:color_bg2 fg:color_red bold"
 format = '[ $user ]($style)'
 
 [directory]
-style = "fg:color_bg0 bg:color_yellow"
+style = "fg:color_yellow bg:color_bg1 bold"
 format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
@@ -90,56 +91,56 @@ truncation_symbol = "…/"
 
 [git_branch]
 symbol = ""
-style = "bg:color_aqua"
-format = '[[ $symbol $branch ](fg:color_bg0 bg:color_aqua)]($style)'
+style = "bg:color_bg2"
+format = '[[ $symbol $branch ](fg:color_aqua bg:color_bg2)]($style)'
 
 [git_status]
-style = "bg:color_aqua"
-format = '[[($all_status$ahead_behind )](fg:color_bg0 bg:color_aqua)]($style)'
+style = "bg:color_bg2"
+format = '[[($all_status$ahead_behind )](fg:color_aqua bg:color_bg2)]($style)'
 
 [nodejs]
 symbol = ""
-style = "bg:color_blue"
-format = '[[ $symbol( $version) ](fg:color_bg0 bg:color_blue)]($style)'
+style = "bg:color_bg1"
+format = '[[ $symbol( $version) ](fg:color_blue bg:color_bg1)]($style)'
 
 [c]
 symbol = " "
-style = "bg:color_blue"
-format = '[[ $symbol( $version) ](fg:color_bg0 bg:color_blue)]($style)'
+style = "bg:color_bg1"
+format = '[[ $symbol( $version) ](fg:color_blue bg:color_bg1)]($style)'
 
 [cpp]
 symbol = " "
-style = "bg:color_blue"
-format = '[[ $symbol( $version) ](fg:color_bg0 bg:color_blue)]($style)'
+style = "bg:color_bg1"
+format = '[[ $symbol( $version) ](fg:color_blue bg:color_bg1)]($style)'
 
 [rust]
 symbol = ""
-style = "bg:color_blue"
-format = '[[ $symbol( $version) ](fg:color_bg0 bg:color_blue)]($style)'
+style = "bg:color_bg1"
+format = '[[ $symbol( $version) ](fg:color_blue bg:color_bg1)]($style)'
 
 [bun]
 symbol = "🥟"
-style = "bg:color_blue"
-format = "[[ $symbol( $version) ](fg:color_bg0 bg:color_blue)]($style)"
+style = "bg:color_bg1"
+format = "[[ $symbol( $version) ](fg:color_blue bg:color_bg1)]($style)"
 
 [python]
 symbol = ""
-style = "bg:color_blue"
-format = '[[ $symbol( $version) ](fg:color_bg0 bg:color_blue)]($style)'
+style = "bg:color_bg1"
+format = '[[ $symbol( $version) ](fg:color_blue bg:color_bg1)]($style)'
 
 [hostname]
 ssh_only = true
-style = "bg:color_orange fg:color_bg0"
+style = "bg:color_bg2 fg:color_orange"
 format = "[ @$hostname ]($style)"
 
 [docker_context]
 symbol = ""
-style = "bg:color_bg3"
-format = '[[ $symbol( $context) ](fg:#83a598 bg:color_bg3)]($style)'
+style = "bg:color_bg2"
+format = '[[ $symbol( $context) ](fg:color_purple bg:color_bg2)]($style)'
 
 [conda]
-style = "bg:color_bg3"
-format = '[[ $symbol( $environment) ](fg:#83a598 bg:color_bg3)]($style)'
+style = "bg:color_bg2"
+format = '[[ $symbol( $environment) ](fg:color_purple bg:color_bg2)]($style)'
 
 [cmd_duration]
 min_time = 2000
@@ -150,7 +151,7 @@ format = "[[ \uf252 $duration ](fg:color_yellow bg:color_bg1)]($style)"
 disabled = false
 time_format = "%R"
 style = "bg:color_bg1"
-format = '[[  $time ](fg:color_fg0 bg:color_bg1)]($style)'
+format = '[[  $time ](fg:color_gray bg:color_bg1)]($style)'
 
 [line_break]
 disabled = false
